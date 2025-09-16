@@ -66,50 +66,69 @@ const CitiesPage = () => {
       </div>
 
       {/* ✅ Hotels Section */}
-      <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 hover:border-gray-300 md:grid-cols-3 gap-6">
         {city.hotels.map((hotel) => (
           <div
             key={hotel.slug}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition relative"
+            className=" rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition relative hover:scale-95"
           >
             {/* Image with Hotel Details button */}
             <div className="relative">
               <img
                 src={hotel.image}
                 alt={hotel.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-90 object-cover"
               />
               <Link
-                href={`/cities/${city.slug}/${hotel.slug}`}
-                className="absolute top-2 right-2 bg-blue-600 text-white text-xs md:text-sm px-3 py-1 rounded-full hover:bg-blue-700 transition"
-              >
-                Hotel Details
-              </Link>
+        href={`/cities/${city.slug}/${hotel.slug}`} // ← the nested slug route
+        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 absolute bottom-0 left-0"
+      >
+        Hotel Details
+      </Link>
             </div>
 
             {/* Hotel Info */}
             <div className="p-4">
-              <h2 className="text-xl font-bold">{hotel.title}</h2>
-              <p className="text-gray-600 text-sm">{hotel.location}</p>
+              <h2 className="text-xl  font-bold">{hotel.title}</h2>
+              <p className="text-gray-500 text-sm">{hotel.location}</p>
 
               <div className="flex items-center gap-1 mt-1 text-yellow-500">
-                <Star size={16} /> {hotel.reviews} / 5
+                <Star size={16} /> 
+                <Star size={16} />
+                <Star size={16} />
+                <Star size={16} />
+                <Star size={16} />
+                {hotel.reviews}
               </div>
 
               <p className="text-gray-700 mt-2">{hotel.description}</p>
 
               <p className="mt-2 text-lg font-semibold text-blue-600">
-                ${hotel.price} / night
+                ${hotel.price}
               </p>
+              <p className="text-sm text-gray-500">
+                {hotel.distance}
+              </p>
+              <h1>{hotel.reviewSummary}</h1>
+              <h1>{hotel.details}</h1>
 
               {/* Add to Cart Button */}
               <button
                 onClick={() => addToCart(hotel)}
-                className="mt-4 bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
+                className="mt-4 px-2 bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
               >
                 Add to Cart 🛒
               </button>
             </div>
+
+             <div className='group relative px-4 text-white text-right text-sm'>
+               <button className='bg-blue-600 hover:bg-blue-700 font-bold text-md transition px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 '>Holiday Offers</button>
+              <h4 className="opacity-0 group-hover:opacity-100">{hotel.Roomquality}</h4>
+              <p className="opacity-0 group-hover:opacity-100">{hotel.amenities}</p>
+              <p className="opacity-0 group-hover:opacity-100">{hotel.cancellation}</p>
+              <p className="opacity-0 group-hover:opacity-100">{hotel.PriceDetails}</p>
+              <p className="opacity-0 group-hover:opacity-100">No prepayments -- all payments at the property </p>
+             </div>
           </div>
         ))}
       </div>

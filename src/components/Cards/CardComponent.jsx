@@ -93,12 +93,14 @@
 
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 
 const CardComponent = ({ items, type }) => {
   if (!items || items.length === 0) return <p className="text-center">No items found.</p>;
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-20 py-10">
+    <>
+    <div className="max-w-7xl mx-auto px-6 md:px-0 py-10">
       {type === "city" && (
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">Explore Our Cities</h2>
@@ -123,12 +125,12 @@ const CardComponent = ({ items, type }) => {
             <img
               src={item.image}
               alt={item.name || item.title}
-              className="rounded-t-xl object-cover w-full h-60"
+              className="rounded-t-xl object-cover w-full h-80"
             />
 
             {/* Card info */}
             <div className="p-4 text-left">
-              <h3 className="font-bold text-xl mb-2">{item.name || item.title}</h3>
+              <h3 className="font-bold text-gray-700 text-xl mb-2">{item.name || item.title}</h3>
               <p className="text-gray-500 mb-3">{item.location}</p>
               <Link
                 href={`/cities/${item.slug}`}
@@ -141,6 +143,7 @@ const CardComponent = ({ items, type }) => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
