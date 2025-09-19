@@ -117,6 +117,8 @@
 // HotelDetailsPage.js
 // app/cities/[slug]/[hotelSlug]/page.jsx
 
+// app/cities/[slug]/[hotelSlug]/page.jsx
+
 'use client';
 
 import { useParams } from 'next/navigation';
@@ -127,23 +129,54 @@ const HotelDetailsPage = () => {
   const params = useParams();
   const { slug, hotelSlug } = params;
 
-  // Find the correct city
+  console.log('🔍 Debug Info:');
+  console.log('City slug:', slug);
+  console.log('Hotel slug:', hotelSlug);
+  console.log('Available cities:', destinations.flatMap(region => region.cities).map(c => ({ name: c.name, slug: c.slug })));
+
   const city = destinations
     .flatMap(region => region.cities)
     .find(c => c.slug === slug);
 
+  console.log('Found city:', city ? { name: city.name, slug: city.slug } : 'NOT FOUND');
+
   if (!city) {
-    return <p>City not found.</p>;
+    return (
+      <div className="p-6">
+        <p className="text-red-600 text-xl">City not found: "{slug}"</p>
+        <p className="mt-2">Available cities:</p>
+        <ul className="list-disc ml-6">
+          {destinations.flatMap(region => region.cities).map(c => (
+            <li key={c.slug}>{c.name} ({c.slug})</li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 
-  // Find the specific hotel
+  console.log('Hotels in city:', city.hotels.map(h => ({ name: h.name, slug: h.slug })));
+
   const hotel = city.hotels.find(h => h.slug === hotelSlug);
 
+  console.log('Found hotel:', hotel ? { name: hotel.name, slug: hotel.slug } : 'NOT FOUND');
+
   if (!hotel) {
-    return <p>Hotel not found.</p>;
+    return (
+      <div className="p-6">
+        <Link href={`/cities/${slug}`} className="text-blue-600 underline">
+          ← Back to {city.name}
+        </Link>
+        <p className="text-red-600 text-xl mt-4">Hotel not found: "{hotelSlug}"</p>
+        <p className="mt-2">Available hotels in {city.name}:</p>
+        <ul className="list-disc ml-6">
+          {city.hotels.map(h => (
+            <li key={h.slug}>{h.name} ({h.slug})</li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 
-  // Render the single hotel's details
   return (
     <div className="p-6">
       <Link href={`/cities/${slug}`} className="text-blue-600 underline">

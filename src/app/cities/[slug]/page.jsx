@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useParams } from 'next/navigation';
-import { cities } from '@/utils/data';
+import { destinations } from '@/utils/destinations';
 import Link from 'next/link';
 import { ShoppingCart, Star } from 'lucide-react';
 import useCartStore from '@/store/cartStore'; // <-- your zustand cart store
@@ -11,8 +11,10 @@ const CitiesPage = () => {
   const params = useParams();
   const slug = params.slug;
 
-  // Find the city matching the slug
-  const city = cities.find((c) => c.slug === slug);
+  // Find the city matching the slug from destinations data
+  const city = destinations
+    .flatMap(region => region.cities)
+    .find(c => c.slug === slug);
 
   const addToCart = useCartStore((state) => state.addToCart);
   const cartItems = useCartStore((state) => state.cart);
@@ -76,7 +78,7 @@ const CitiesPage = () => {
     <div className="relative">
       <img
         src={hotel.image}
-        alt={hotel.title}
+        alt={hotel.name}
         className="w-full h-90 object-cover"
       />
       <Link
@@ -89,8 +91,8 @@ const CitiesPage = () => {
 
     {/* Hotel Info */}
     <div className="p-4">
-      <h2 className="text-xl font-bold">{hotel.title}</h2>
-      <p className="text-gray-500 text-sm">{hotel.location}</p>
+      <h2 className="text-xl font-bold">{hotel.name}</h2>
+      <p className="text-gray-500 text-sm">{city.name}</p>
 
       <div className="flex items-center gap-1 mt-1 text-yellow-500">
         <Star size={16} /> 
@@ -98,17 +100,17 @@ const CitiesPage = () => {
         <Star size={16} />
         <Star size={16} />
         <Star size={16} />
-        {hotel.reviews}
+        <span className="ml-1 text-sm text-gray-600">⭐ {hotel.rating} ({hotel.reviews} reviews)</span>
       </div>
 
       <p className="text-gray-700 mt-2">{hotel.description}</p>
 
       <p className="mt-2 text-lg font-semibold text-blue-600">
-        ${hotel.price}
+        {hotel.price}
       </p>
-      <p className="text-sm text-gray-500">{hotel.distance}</p>
-      <h1>{hotel.reviewSummary}</h1>
-      <h1>{hotel.details}</h1>
+      <div className="mt-2">
+        <p className="text-sm text-gray-600"><strong>Amenities:</strong> {hotel.amenities.join(', ')}</p>
+      </div>
 
       {/* Add to Cart Button */}
       <button
@@ -123,13 +125,13 @@ const CitiesPage = () => {
       <button className="bg-blue-600 hover:bg-blue-700 font-bold text-md transition px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100">
         Holiday Offers
       </button>
-      <h4 className="opacity-0 group-hover:opacity-100">{hotel.Roomquality}</h4>
-      <p className="opacity-0 group-hover:opacity-100">{hotel.amenities}</p>
-      <p className="opacity-0 group-hover:opacity-100">{hotel.cancellation}</p>
-      <p className="opacity-0 group-hover:opacity-100">{hotel.PriceDetails}</p>
-      <p className="opacity-0 group-hover:opacity-100">
-        No prepayments -- all payments at the property
-      </p>
+      <div className="opacity-0 group-hover:opacity-100 text-left">
+        <h4 className="font-semibold">Gallery Available</h4>
+        <p className="text-sm">{hotel.gallery ? `${hotel.gallery.length} photos` : 'Photos available'}</p>
+        <p className="text-sm mt-1">
+          Book now for best rates
+        </p>
+      </div>
     </div>
   </div>
 ))}
