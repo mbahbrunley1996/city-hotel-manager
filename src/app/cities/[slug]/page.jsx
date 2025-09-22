@@ -6,6 +6,8 @@ import { destinations } from '@/utils/destinations';
 import Link from 'next/link';
 import { ShoppingCart, Star } from 'lucide-react';
 import useCartStore from '@/store/cartStore';
+import FooterComponent from '@/components/Footer/FooterComponent';
+import { ArrowRight } from 'lucide-react';
 
 const CitiesPage = () => {
   const params = useParams();
@@ -98,7 +100,7 @@ const CitiesPage = () => {
                   href={`/cities/${city.slug}/${hotel.slug}`}
                   className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 absolute bottom-0 left-0"
                 >
-                  Hotel Details
+                 <div className='flex items-center'> Visits <span><ArrowRight /></span></div>
                 </Link>
               </div>
 
@@ -146,6 +148,7 @@ const CitiesPage = () => {
           <p className="text-center text-gray-500 col-span-full">No hotels found matching your search.</p>
         )}
       </div>
+      <FooterComponent />
     </>
   );
 };

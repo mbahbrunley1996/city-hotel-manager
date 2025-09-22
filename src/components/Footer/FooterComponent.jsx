@@ -33,7 +33,7 @@ const FooterComponent = () => {
           <h4 className="font-semibold mb-4">Contact Us</h4>
           <ul className="space-y-2 text-gray-400">
             <li>Email: <a href="mailto:info@cityhotelmanager.com" className="hover:text-white transition">info@cityhotelmanager.com</a></li>
-            <li>Phone: <a href="tel:+237699123456" className="hover:text-white transition">+237 699 123 456</a></li>
+            <li>Phone: <a href="tel:+237676795473" className="hover:text-white transition">+237 676 795 473</a></li>
             <li>Address: Douala, Cameroon</li>
           </ul>
         </div>

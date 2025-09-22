@@ -124,6 +124,7 @@
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { destinations } from '@/utils/destinations';
+import FooterComponent from '@/components/Footer/FooterComponent';
 
 const HotelDetailsPage = () => {
   const params = useParams();
@@ -178,26 +179,35 @@ const HotelDetailsPage = () => {
   }
 
   return (
-    <div className="p-6">
-      <Link href={`/cities/${slug}`} className="text-blue-600 underline">
+    <>
+    <div className="p-6 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 shadow-lg text-white">
+     
+      <Link href={`/cities/${slug}`} className="text-white underline font-bold">
         ← Back to {city.name}
       </Link>
-      <div className="mt-4">
+      
         <h1 className="text-3xl font-bold">{hotel.name}</h1>
-        <img src={hotel.image} alt={hotel.name} className="w-full h-80 object-cover mt-4 rounded-lg" />
+      
+       <div className="mt-4 bg-white"> 
+        <img src={hotel.image} alt={hotel.name} className="w-full h-100 object-cover mt-4 rounded-lg" />
+        <p className="mt-2 ml-2 text-gray-600 flex flex-wrap gap-4 shadow-md transition-transform">{hotel.gallery}</p> 
+         <div className='flex flex-col p-6 items-start'>
         <p className="mt-2 text-gray-600">{hotel.description}</p>
         <p className="mt-2 font-bold text-green-600">{hotel.price}</p>
-        <p className="mt-4">
-          **Amenities:** {hotel.amenities.join(', ')}
+        <p className="mt-4 text-gray-600">
+          **Amenities:** {hotel.amenities}
         </p>
         <p className="mt-2">
-          ⭐ {hotel.rating} ({hotel.reviews} reviews)
+          ⭐ ⭐ ⭐ ⭐ ⭐ {hotel.rating} ({hotel.reviews} reviews)
         </p>
         <button className="mt-6 px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700">
-          Book Now
+          Book Now 
         </button>
+        </div>
       </div>
     </div>
+    <FooterComponent  />
+    </>
   );
 };
 

@@ -1,171 +1,195 @@
-// // utils/destinations.js
+
 
 // export const destinations = [
-//   // 1. Littoral Region - Douala
 //   {
 //     region: "Littoral Region",
 //     cities: [
 //       {
 //         name: "Douala",
 //         slug: "douala",
+//         image: "https://i.ytimg.com/vi/_5z1gxelv8M/maxresdefault.jpg",
 //         hotels: [
-//           {
-//             name: "Akwa Palace",
-//             slug: "akwa-palace",
-//             image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg",
-//               "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg"
-//             ],
-//             description: "Luxury stay in central Douala.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool"],
-//             price: "XAF 144,500 / night",
-//             rating: "8.5",
-//             reviews: 171
-//           },
-//           {
-//             name: "Krystal Palace",
-//             slug: "krystal-palace",
-//             image: "https://images.pexels.com/photos/221064/pexels-photo-221064.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/221064/pexels-photo-221064.jpeg",
-//               "https://images.pexels.com/photos/221066/pexels-photo-221066.jpeg"
-//             ],
-//             description: "Elegant hotel with modern rooms.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Spa"],
-//             price: "XAF 279,906 / night",
-//             rating: "8.3",
-//             reviews: 142
-//           },
-//           {
-//             name: "FAYA Hotel",
-//             slug: "faya-hotel",
-//             image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg",
-//               "https://images.pexels.com/photos/271625/pexels-photo-271625.jpeg"
-//             ],
-//             description: "Affordable hotel near the city center.",
-//             amenities: ["Free WiFi", "Breakfast included", "24-hour front desk"],
-//             price: "XAF 89,100 / night",
-//             rating: "8.0",
-//             reviews: 95
-//           },
-//           {
-//             name: "ONOMO Hotel",
-//             slug: "onomo-hotel",
-//             image: "https://images.pexels.com/photos/271667/pexels-photo-271667.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/271667/pexels-photo-271667.jpeg",
-//               "https://images.pexels.com/photos/271668/pexels-photo-271668.jpeg"
-//             ],
-//             description: "Modern hotel with pool and business facilities.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Business center"],
-//             price: "XAF 133,974 / night",
-//             rating: "8.4",
-//             reviews: 120
-//           },
-//           {
-//             name: "La Falaise",
-//             slug: "la-falaise",
-//             image: "https://images.pexels.com/photos/261047/pexels-photo-261047.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261047/pexels-photo-261047.jpeg",
-//               "https://images.pexels.com/photos/261048/pexels-photo-261048.jpeg"
-//             ],
-//             description: "Luxury hotel with sea views.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Spa", "Beach access"],
-//             price: "XAF 151,200 / night",
-//             rating: "8.6",
-//             reviews: 130
-//           }
+//           { name: "Akwa Palace", slug: "akwa-palace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/AKWA_PALACE.JPG", gallery: [<img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg" alt="gallary" width={400} height={300} /> , <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg" alt="gallary" width={400} height={300} />,<img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg" alt="gallary"  width={400} height={300} />], description: "Luxury stay in central Douala.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 144,500 / night", rating: "8.5", reviews: 171 },
+//           { name: "Krystal Palace", slug: "krystal-palace", image: "/hotels in doaual/krystal hotel.png", gallery: [<img src="https://images.pexels.com/photos/221064/pexels-photo-221064.jpeg" alt="gallary" width={400} height={300} />,<img src="https://images.pexels.com/photos/221066/pexels-photo-221066.jpeg" alt="gallary" width={400} height={300} />, <img src="https://images.pexels.com/photos/221067/pexels-photo-221067.jpeg" alt="gallary" width={400} height={300} />,<img src="" alt="gallary" width={400} height={300} />], description: "Elegant hotel with modern rooms.", amenities: ["Free WiFi","Breakfast included","Pool","Spa"], price: "XAF 279,906 / night", rating: "8.3", reviews: 142 },
+//           { name: "FAYA Hotel", slug: "faya-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/faya-hotel--1024x910.png", gallery: [<img src="https://lh5.googleusercontent.com/p/AF1QipOgnGa4LeR5-xKqUcMtIJdGXiWdS4xfjS6OnTUx=w592-h404-n-k-no-v1" alt="garllary" width={400} height={300} />,<img src="https://lh5.googleusercontent.com/p/AF1QipNVmSCbdN1zwAwZpi7sk0CRuD2u4RQCe1_Y4_-a=w592-h404-n-k-no-v1" alt="gallary" width={400} height={300} />], description: "Affordable hotel near the city center.", amenities: ["Free WiFi","Breakfast included","24-hour front desk"], price: "XAF 89,100 / night", rating: "8.0", reviews: 95 },
+//           { name: "ONOMO Hotel", slug: "onomo-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/ONOMO-Hotel-Douala.jpg", gallery: [<img src="https://lh5.googleusercontent.com/p/AF1QipPUjMExJuMnHQSIjAQaDLewyczYo9F_wzRe3bov=w592-h404-n-k-no-v1" alt="gallary" />,"https://lh5.googleusercontent.com/p/AF1QipMvfW5QJjQXbdFijJ029ea79FRXgYm-vkmwXASN=w592-h404-n-k-no-v1"], description: "Modern hotel with pool and business facilities.", amenities: ["Free WiFi","Breakfast included","Pool","Business center"], price: "XAF 133,974 / night", rating: "8.4", reviews: 120 },
+//           { name: "La Falaise", slug: "la-falaise", image: "https://visit-douala.com/wp-content/uploads/2023/08/Hotel_Residence_la_Falaise_Akwa_Douala-1024x768.jpg", gallery: ["https://lafalaisebonapriso.com/wp-content/uploads/2024/07/banner02.jpg","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/81/6d/30/piscine.jpg?w=900&h=500&s=1"], description: "Luxury hotel with sea views.", amenities: ["Free WiFi","Breakfast included","Pool","Spa","Beach access"], price: "XAF 151,200 / night", rating: "8.6", reviews: 130 }
 //         ]
 //       }
 //     ]
 //   },
+// {
+//   region: "Centre Region",
+//   cities: [
+//     {
+//       name: "Yaoundé",
+//       slug: "yaounde",
+//       image: "https://media.gettyimages.com/id/sb10066698pr-001/fr/photo/presidents-palace-yaounde-cameroon.jpg?s=2048x2048&w=gi&k=20&c=w0qaWEYsTU41C3ZyTA_q-pdDViXT0Z19qMvPCcZlKok=",
+//       hotels: [
+//         { name: "Hilton Yaoundé", slug: "hilton-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/cc/85/e4/pool-exterior.jpg?w=600&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d2/36/d2/hilton-yaounde.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/56/c3/83/hilton-yaounde.jpg?w=1000&h=-1&s=1"], description: "Upscale hotel with pool, gym, tennis court and central location.", amenities: ["Free WiFi","Breakfast included","Pool","Fitness center","Conference rooms"], price: "XAF 220,000 / night", rating: "9.0", reviews: 250 },
+//         { name: "Djeuga Palace", slug: "djeuga-palace", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ec/44/c4/entrance.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/d7/5a/ee/photo1jpg.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/64/ed/70/chambre-standard-twin.jpg?w=1000&h=-1&s=1"], description: "Elegant hotel with swimming pool, restaurants and nightlife nearby.", amenities: ["Free WiFi","Breakfast included","Pool","Bar","Business center"], price: "XAF 150,000 / night", rating: "8.7", reviews: 180 },
+//         { name: "Hotel Marina", slug: "hotel-la-falaise-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/b7/ca/14/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/fe/0d/f2/king-suit-la-chambre.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/7f/51/de/offrez-vous-un-moment.jpg?w=1000&h=-1&s=1"], description: "Modern rooms with city views, pool and fitness center.", amenities: ["Free WiFi","Breakfast included","Pool","Fitness center"], price: "XAF 120,000 / night", rating: "8.4", reviews: 140 },
+//         { name: "Star Land Hotel", slug: "residence-hoteliere-jouvence", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/22/00/38/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/7c/4d/a0/caption.jpg?w=500&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/d1/8f/84/studio-meuble-mini-prix.jpg?w=1000&h=-1&s=1"], description: "Comfortable serviced apartments ideal for long stays.", amenities: ["Free WiFi","Breakfast included","Kitchenettes"], price: "XAF 90,000 / night", rating: "8.0", reviews: 95 },
+//         { name: "La Perle Hotel", slug: "franco-hotel-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/b2/cb/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/6b/91/caption.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/6b/8d/caption.jpg?w=1000&h=-1&s=1"], description: "Well-rated hotel with bar, restaurant and city access.", amenities: ["Free WiFi","Breakfast included","Pool","Bar"], price: "XAF 100,000 / night", rating: "8.2", reviews: 110 }
+//       ]
+//     }
+//   ]
+// },
+// // 3. Northwest Region – Bamenda
+// {
+//   region: "Northwest Region",
+//   cities: [
+//     {
+//       name: "Bamenda",
+//       slug: "bamenda",
+//       image: "https://t4.ftcdn.net/jpg/07/09/51/09/360_F_709510932_0xdJMNijjTOZQw7FfWQnN9Cl6utwPDW0.jpg",
+//       hotels: [
+//         { name: "AZAM Hotel", slug: "ayaba-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/9b/f8/8a/azam-hotel.jpg?w=900&h=500&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/9b/f8/6b/azam-hotel.jpg?w=1000&h=-1&s=1","https://images.pexels.com/photos/276085/pexels-photo-276085.jpeg"], description: "Well-known hotel in the heart of Bamenda.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 90,000 / night", rating: "8.0", reviews: 88 },
+//         { name: "MAWA Hotel", slug: "blue-pearl-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9b/d4/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9c/da/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9c/c0/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1"], description: "Modern hotel with city views.", amenities: ["Free WiFi","Breakfast included","Restaurant"], price: "XAF 78,000 / night", rating: "7.8", reviews: 65 },
+//         { name: "Top Star Hotel", slug: "upstation-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/a5/e3/79/getlstd-property-photo.jpg?w=600&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/ab/fe/30/top-star-hotel.jpg?w=600&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/ab/fe/2f/top-star-hotel.jpg?w=600&h=-1&s=1"], description: "Budget-friendly hotel with conference hall.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.5", reviews: 40 },
+//         { name: "MansField Plaza Hotel", slug: "chariot-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrn-4lBWUc2R77R4dIpdn3kg-_EyR2b2TD4nFAUCFjR89nQeQslr0v82xvx3lobmbhhnUk_MzKqVn66fJglffmyuNAeKORTCj0R4zZ0J9gf414E23_QCQTI6slU0sqOxTRejuhe=w252-h189-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4noFirTa5yAsVunoFREHcdVjk_Cg83pCIHnrddTotpjUMegsmn4CAK-rgnbfmtPwi_5DcyEyzJrq8HrfYA0QnfdYqdcoN4X-jaDGjO5aNiFp15WPxsTeIck7H6BngzFzEMHG4nUAOg=w253-h449-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq0b4OSETVbuJ37qWWhaeHV0GehwgDiQ0yM6Aqv8MCcpykI4gAEVHH152N2KJS3htFu3N9eoE1gzzk1mzRnQEt4822Hkvuk4ygwMOp_Z5vaa0XNFFSVD9VNDarIYfolGt9HdvbZAg=w253-h337-k-no"], description: "Comfortable stay with restaurant & lounge.", amenities: ["Free WiFi","Breakfast included","Bar"], price: "XAF 60,000 / night", rating: "7.6", reviews: 55 },
+//         { name: "BLue Pearl Hotel", slug: "mondial-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipNDjwqRwPkZVyNm5rq6xS78ZXJyttE-N6zK5VGO=w252-h168-k-no", gallery: ["https://lh6.googleusercontent.com/proxy/Wo2SpatxUPWZm0wPUzAqbKu3NDl3vC1SpdPVsSw3FJP6i1LFzP9LsJPDjFIrCPNx_g-7syhTScdSwW5PJiyRzt7_4U0-2hlr_97EHJfGkNaD7Cgd5FF5h0y9WALFhSAaqAyB-iMQ1KZE-nSZQOJqsvRJpajntQ=w253-h186-k-no","https://lh3.googleusercontent.com/gvs/AKFkxhv9kGO_njNcx33Aszi3CrbKEb4cpk7Z-zyzFTt4x9K2WBSyBSdTotIBi-geenimyFWsG5pKplwwLugNHoL7KiODjSY9dHDPHrJU"], description: "Boutique hotel with clean and quiet rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.9", reviews: 43 }
+//       ]
+//     }
+//   ]
+// },
 
-//   // 2. Centre Region - Yaoundé
-//   {
-//     region: "Centre Region",
-//     cities: [
-//       {
-//         name: "Yaoundé",
-//         slug: "yaounde",
-//         hotels: [
-//           {
-//             name: "Hilton Yaoundé",
-//             slug: "hilton-yaounde",
-//             image: "https://images.pexels.com/photos/261187/pexels-photo-261187.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261187/pexels-photo-261187.jpeg",
-//               "https://images.pexels.com/photos/261188/pexels-photo-261188.jpeg"
-//             ],
-//             description: "Upscale hotel with pool and conference center.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Fitness center"],
-//             price: "XAF 180,000 / night",
-//             rating: "8.7",
-//             reviews: 200
-//           },
-//           {
-//             name: "Hotel Mont Fébé",
-//             slug: "hotel-mont-febe",
-//             image: "https://images.pexels.com/photos/261200/pexels-photo-261200.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261200/pexels-photo-261200.jpeg",
-//               "https://images.pexels.com/photos/261201/pexels-photo-261201.jpeg"
-//             ],
-//             description: "Mountain-view hotel with golf course.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool"],
-//             price: "XAF 150,000 / night",
-//             rating: "8.4",
-//             reviews: 145
-//           },
-//           {
-//             name: "Djeuga Palace",
-//             slug: "djeuga-palace",
-//             image: "https://images.pexels.com/photos/261211/pexels-photo-261211.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261211/pexels-photo-261211.jpeg",
-//               "https://images.pexels.com/photos/261212/pexels-photo-261212.jpeg"
-//             ],
-//             description: "Modern hotel with spacious suites.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Restaurant"],
-//             price: "XAF 120,000 / night",
-//             rating: "8.1",
-//             reviews: 110
-//           },
-//           {
-//             name: "Franco Hotel",
-//             slug: "franco-hotel",
-//             image: "https://images.pexels.com/photos/261220/pexels-photo-261220.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261220/pexels-photo-261220.jpeg",
-//               "https://images.pexels.com/photos/261221/pexels-photo-261221.jpeg"
-//             ],
-//             description: "Contemporary hotel with rooftop restaurant.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Rooftop bar"],
-//             price: "XAF 98,000 / night",
-//             rating: "8.0",
-//             reviews: 90
-//           },
-//           {
-//             name: "La Falaise Yaoundé",
-//             slug: "la-falaise-yaounde",
-//             image: "https://images.pexels.com/photos/261230/pexels-photo-261230.jpeg",
-//             gallery: [
-//               "https://images.pexels.com/photos/261230/pexels-photo-261230.jpeg",
-//               "https://images.pexels.com/photos/261231/pexels-photo-261231.jpeg"
-//             ],
-//             description: "Boutique hotel with chic rooms.",
-//             amenities: ["Free WiFi", "Breakfast included", "Pool", "Spa"],
-//             price: "XAF 135,000 / night",
-//             rating: "8.5",
-//             reviews: 125
-//           }
-//         ]
-//       }
-//     ]
-//   }
+// // 4. Southwest Region – Buea
+// {
+//   region: "Southwest Region",
+//   cities: [
+//     {
+//       name: "Buea",
+//       slug: "buea",
+//       image: "https://live.staticflickr.com/3792/13895086893_894467b6cd_b.jpg",
+//       hotels: [
+//         { name: "Hotel L'empire", slug: "hotel-l'empire", image: "https://lh3.googleusercontent.com/p/AF1QipPLUA49FiR01RoTwvt0lyCv4FjudJoJdIPfYWJe=w252-h189-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/FX2XGrce6FNeFsbVzrpoNV9cizhKX_Xx-W8ViJy6z1luIxPfFne_h1Ap6lq16FOT6Jq9vprwXoNTT6ner3Q2Lak8jOI7r2WUZV2Ru0ml3lKr4osOxZzhJxWEuXle1H9FdhRGbaBa1IzWArwSOrVM-5pTGLqf3EA=w252-h189-k-no "," https://lh3.googleusercontent.com/p/AF1QipMGklAurgy4hZCrykLf7LFJF0Oo5nfQK2Qx_YmJ=w252-h189-k-no"], description: "Famous for its mountain view and gardens.", amenities: ["Free WiFi","Breakfast included","Pool","Restaurant"], price: "XAF 95,000 / night", rating: "8.2", reviews: 102 },
+//         { name: "Hotel Pinorich", slug: "hotel-pinorich", image: "https://lh3.googleusercontent.com/p/AF1QipOJzTx7OKLeF_2_0LdveqYUnX3Z6mqNHujSqHGK=w253-h337-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipMoVnkYiFm1VmuTbQPEcIdOjmkRCzgk2mQVq1aE=w253-h168-k-no"," https://lh4.googleusercontent.com/proxy/Q751B0z9oyKN48LCu_RihwO59BUX_Epz9fbFsSssPdtqHOgTyOjLCWJsWiNAGCnficgo89N7esA1D1rmbfNFeI0EBTtGtgcWtzPIe9Bp2yvinxymggab0JLUaRDqyU7C8uBmq2YPHFhCU-y_1U4-nZ5Lnq20Qw=w252-h168-k-no"], description: "Long-stay apartments with hotel services.", amenities: ["Free WiFi","Breakfast included","Kitchenette"], price: "XAF 80,000 / night", rating: "8.0", reviews: 67 },
+//         { name: "Hotel Saint Claire", slug: "hotel-saint-claire", image: "https://lh3.googleusercontent.com/p/AF1QipMm6tYAsXdDGSG5WXvaFK6yCRXUwvH5jwjyH0g_=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipMO10f9wOWAQNqTnyTLaUi5m4mqG6bDEEq4tQSV=w252-h336-k-no"," https://lh3.googleusercontent.com/p/AF1QipO54ZVREWPIbxx0BAWSwmxWUL0Ziol-K1x7Mglm=w252-h189-k-no"], description: "Centrally located with conference halls.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 50 },
+//         { name: "Capitol Hotel Residence", slug: "capitol-hotel-residence", image: "https://lh3.googleusercontent.com/p/AF1QipMVwm3AmpAkOdwwjK4ggmG0qYAyMZ7JploLt-5N=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4noFVSmM1NcWFT7lIxFsFqM1mzQ9Ybpxx_I0lurjxIdyYri3VhO2JQC8T1M5igHDREdgYoP29808bGJNuEvSGEd8a-j2OxJAZl21ZFO_X5L6GwU7fhenncu4Qmq9j5oUH0_z0IU=w252-h189-k-no"," https://lh3.googleusercontent.com/p/AF1QipMJTwky4Ut30D4Nv-nCd-Jk3KW_Tdmx2pBoAW7D=w252-h189-k-no"], description: "Affordable rooms with restaurant.", amenities: ["Free WiFi","Breakfast included","Bar"], price: "XAF 50,000 / night", rating: "7.6", reviews: 38 },
+//         { name: "Mountain Hotel", slug: "mountain-hotel", image: "https://lh3.googleusercontent.com/proxy/8-ooj9aXf6fqXhhtccmN-HiRzwxL0IZdRstZdqdc9UT3IYNK_TY1C1LRU8d1qiL75Z-At_ANXWUGjmvCk0igb1T8-7a0SDXOl-jToqUQ8hl9i-Kj96e4VXtp037hb0GQnEJV74BRCKsEFn5uqi-9aAFjqGmvuKE=w252-h183-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4noXr7BV1TtqNHMvcdzE1-dlikHPnQ5y8golBAVzNmi3CueBaRVNZgx155x9Smo_4oL6iz3NQFN27ccr7lbv1d3OqkfH0uspKMAdIT6oBmuUFVVUtIr67DG58BwF_P_lCfARerSX=w252-h189-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npKBgzdPBoIC4KttV6Ms6v6hxYfxcH8aXDMpxJH4uke659dhpvvY3r-SoYLS7VUGlpYOjmub_ai1GvR5Wv0O2ZB6MxTGEpmXn3FKbzkkESRoGSfv-8yW6KW1hlJ5Xw2Msz0jML81A=w252-h189-k-no"], description: "Boutique hotel with cozy rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.9", reviews: 42 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 5. West Region – Bafoussam
+// {
+//   region: "West Region",
+//   cities: [
+//     {
+//       name: "Bafoussam",
+//       slug: "bafoussam",
+//       image: "https://www.shutterstock.com/shutterstock/photos/2308753449/display_1500/stock-photo-bafoussam-west-cameroon-february-youth-parade-at-the-youth-festival-in-bafoussam-2308753449.jpg",
+//       hotels: [
+//         { name: "Hotel Zingana", slug: "hotel-zingana", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/39/52/31/hotel-zingana.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/c9/7c/50/caption.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/c9/7c/51/caption.jpg?w=1000&h=-1&s=1"], description: "Upscale hotel with modern decor.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 95,000 / night", rating: "8.1", reviews: 70 },
+//         { name: "Hotel Altiltel", slug: "la-vallee-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipNiqGfvLt9u8NRsaGbOvlZyHG7iheJ_zw3vd_c=w253-h253-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipNJc8Es8m_1E3y8f_N9j8J-Xup5xomzX9kdbNM=w253-h288-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npaY9sogphFTDZ5eaw6qbHRa_E0dM9RimI1BS4wukPUvBlckiAnVxGh9e9EjictRNKlf07TzLz_ncbmkCgfPlUZ3tb5HoTMS8XkxCP2RfjAfioDIJ3ZEB1v_EMXjdC1_5zU9TjrMw=w252-h336-k-no"], description: "Charming hotel with mountain views.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 45 },
+//         { name: "Cergy Pontiose Hotel", slug: "talotel", image: "https://lh3.googleusercontent.com/p/AF1QipOfCbj-5XFg3D1mcPyFivrSl3U-SRd90hkZeAbD=w252-h155-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4np05_wxAPsiyTIhmkA4zB1k2zEOPYkdnIIc415_0nijMrDsp9v9V4inXMP84x-ZC5eIRM_h_kqyx6tBTPmaNGn65XyCAS5-JJBF2tyMO-5aDdlKpUdffRx_a7yJyEp2vsmoj7OJsQ=w252-h167-k-no","https://lh5.googleusercontent.com/proxy/B3S_apttiwe2XBy2W-mgTRhtB9COzKs0nDP6g2PTEUQVXu2Hy4CD1ylE6mMbmFWdbt-sLoaYvdCARX0wosrqclp8ZRgKvjoPlSkinzOvpCrllMMAC2DC6NxZoD2UxQWbjshfLRTlvl4AhE__tJ_uGuH7xEmQSQ=w252-h168-k-no"], description: "Central location with restaurant.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 40 },
+//         { name: "Hotel Talotel", slug: "manoir-des-princes", image: "https://lh4.googleusercontent.com/proxy/i05QeDKm1ej1iL5IxbO__1nqoZS1Iua1sJNabBYTk9Y_QxbegGHnpAQknBUi63DVvAfJqTr-n4PBEGr_e8f4XmwEnLEWUyZeagWn1Rtl6_ho6El048_GRHRxmKvIpjhOJgyfjl-WjBfgghjJj1qteTUIHn7jrPo=w252-h185-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4no7JFr1EHMCoNMvoItLIRaDEhtqOMP9h8aP8DT6FPsKnN_qniehYIHmsbcFMYPMWT2vya5sA8qptjrkmxc9I6CKq9JX_J6pjqzZGdKl9s-0hShkTVXNrmdJmXpxSm6yKazn4XR-=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npm_dWFTlKhGqsJEAVpl_okoNSf5Qf0-5oyE0h7aJ9KZIkXcyk8qIYASeoFy7DGVMTz_8Xh5FG0eUpjwOm_UImKWDBgerCV42EDgc9Pm75yiFcS6uNMh2QyViR2EfiPyr9onpF2=w252-h168-k-no"], description: "Boutique stay with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.9", reviews: 42 },
+//         { name: "Résidence Sare Hotel", slug: "residence-saint-david", image: "https://lh3.googleusercontent.com/proxy/2fN3zyDnqn85ZTfmDo3VgVSCDXZ8a4xeC9RNuCrksFtR2dhJkTkRc0eLnMNZBT7mmiFDEkc0RH6cRFslQhNt7wVokGWt3oO9x8IvclrAHxla5GYUCzWDlptiwaBV0hxQMbxO9V-At6_q-SmSPrLzvQCPThZ_hQ=w252-h185-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4npVoePxr8QY7idnVXyWJZAdDjfLixywF4u92fvdQfj1AaurleNkTfwQHGORml4oYkGR2Ce91Dbu2e4Bv96w_KLh_7zTENqWSsw7zurjsIyq-IAJxML6w3mqoBLeC2jDJ3MMOrQ=w252-h189-k-no","https://lh5.googleusercontent.com/proxy/g-MDc_me3DlK3cu0sgIPPTYvOQvXuujj7Ca2U33C5ScQY-_By_c1dFocKreHpNugl_tBisneqgq2DFijTaGjxhuJFMcHoVpPKbBk8CcRedYE9Dq_4H4EZUta6_IV0mxVlijOmoZ03yNikEb5-El41fqxe_VeCw=w252-h185-k-no"], description: "Family-friendly hotel.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 52,000 / night", rating: "7.7", reviews: 33 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 6. North Region – Garoua
+// {
+//   region: "North Region",
+//   cities: [
+//     {
+//       name: "Garoua",
+//       slug: "garoua",
+//       image: "https://irawotalents.com/wp-content/uploads/2018/02/ID4.png",
+//       hotels: [
+//         { name: "New town palace hotel", slug: "new-town-palace-hotel", image: "https://lh5.googleusercontent.com/proxy/cdCDsBDWujxDU-jJWBVFkWsV4bRMbnImxGDxt9eFYpQhBc11hxHO7RPLAiarOn53tT12MJLRYKWW_rLL9LQRlj-bILj3U1ZlyVRhH7Gfh2ByuR_yqmbxchwPVejbFs_7eiz9G42TSYABFRl0T8S1J1wstlomcP4=w253-h122-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDBUXkxVOAiiqynWYRZ2aHoIe1NXYlX6M4ntefrDeSqStBu7YEsKK2wuWLcIgFoumNI-3yzhwzqic2I70Ic56_zA7FpfHbhQDnmfUvPnz8WScwOKhkGaMGTTA5czGHWVJzhHga=w253-h189-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4no4wizRM12ubsj7TjN1twuqSPbkhyYSvX_2wWQNmvYr3A8Y2X4WA4v_jKubwdvshfoG4zMDyL0BW8iTwm45PwjuVa4EjRfLGdEmA12ZA2Lx0nvUMk3E0c_qSWaniGc99Jq1qk8pKg=w253-h142-k-no"], description: "Classic hotel by the river.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 55 },
+//         { name: "Hotel Rebadou ", slug: "hotel-rebadou", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npsxmI3FmJSNGE5yMzneQg0APIfKtCnRAW9-60VhXCLra3e-BMrBzjIQ9piMAsN6ulXuYqJNWG5b9RuxjqKr-c3Zwd-9Ega5LXt8iivByYSLFYmEnYLUwI08t_K1BuVRLSZPA0E=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYYskCMRcTobOK-f0NuAAUCaqXXmmYn_R7mLyrStb2yPUj0jsNn-oqWin3AGuLlmv99o5m-AqJAIwCirV8GPcX_mtOOht-thtXw4U0v_ie2QU_CaFsPilzWIKGh9hedTpJOgff=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr-IzMGgVUSpvvmjg4yv587tIeCdk5MK2P2f1IIWuC9A4BTbcG39orsT1vTyDEu5pdEzvLaIYWm3-RJcDZUwFm9VVa7680QO-wDj5JMUSvOHD1YaJGubUoInBroJEZtZeBUmWlQJw=w252-h189-k-no "], description: "Comfortable hotel with restaurant.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.6", reviews: 38 },
+//         { name: "Hotel La Benoue", slug: "hotel-la-benoue", image: "https://lh4.googleusercontent.com/proxy/ukwTw2r5_g_x8wsP5Zrf7CqjPLHOjadtCVAhAZ77XSyqRHH-oj44mPGKx80VKnOzS55hoScHshV5cu8VhqaJLJNTJZ2t_oqfbp_yQ9xZZuRH5tt572V_W_1rHmDEUJI8ol7AxxiPWFZuYlXiIc7HTmJ-9V5JJw=w252-h146-k-no", gallery: [" https://lh5.googleusercontent.com/proxy/zRpjOJo1f72_IIBRhavlSSl8K407rKubGlnTI6K58GYv9yf2oGJuWqgho3iE5MdC4joZ7V27Saxvalm626J5DwF8XH9NCAH9oyc5Ut93XcDQUOqGOAZOKsQ_LviaBOs1Yw7-sospIr5DemKiEYiq9nHj8NYbCA=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_wyJBvCC6agAIKEFQTIWo66XVsciV3AyAscBwrK8kJyVZGeC_GEjEtNixA_3rcsSVJku7vihSKks17ldQkFjoI5RHvP1-PNuf37G7UzSrgAeaYTzTt8lSd2qQUSvJ3hK0r9vzpQ=w252-h189-k-no"], description: "Budget hotel in central Garoua.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 25 },
+//         { name: "Shalom City Hotel", slug: "shalom-city-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipORUf8gjwU1qE89gZTXFp4az0Xbzpko5L0gjpJl=w252-h378-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipNm6Ma331PmGv64OgCNaEANVa68WAzSEnpvXVeO=w252-h320-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npqLYsJ5ik_kcM1w_TOHDh_vKNvuhW3wKBufZKSPLezLoAzrgYz1VQ7tpGT4KcMRNrkAXInT4VO7S3RwmMTYaZeM4HTfJ4uK38BlIC1BcYVo_EHYAuqMq6Rj20bI7nzayofNZvl=w252-h189-k-no"], description: "Boutique stay with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.7", reviews: 30 },
+//         { name: "Christella Hotel", slug: "christella-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npMUcM_JtbPqMiPPdWb1vsX-qPQunJ2UxKPIrkOrsIV1jLz_fZ4hYktUzXM8Y0V0lxbBx3YWJpvVjC5jtq7bka4MLVRjQM9bmCRYEmIHbpiI5YaHDNqr93mSiuMTUMZs6Qfzj0omA=w252-h448-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqesMM5c2DKy480e36HonJBL8fyF8xM4CV2RsfZpHn166b8bgODEcoefARjBTF4EElGSDh18ecW_3YJ-oyRQb2VGm1nB2FiPtY0Ge-w0S2kqHtLKphiPDMYK2Y1aQR1HFCtEO3G=w253-h449-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqgC640fnGVzeEUwaJAl0xOeTZN9ngnLTy2Egx7P9xcJZf8hJ8rrMzBtMKEmjFumDhu34kH58eMIhkXi64_H77SpQYOv7TRq2NcU6TE-kK8Bo5B9pwYAKOjxdy6mfkhzjDC_lE=w253-h316-k-no"], description: "Family-friendly residence.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 7. Far North Region – Maroua
+// // 8. East Region – Bertoua
+// // 9. South Region – Ebolowa
+// // 10. Adamawa Region – Ngaoundéré
+// // 7. Far North Region – Maroua
+// {
+//   region: "Far North Region",
+//   cities: [
+//     {
+//       name: "Maroua",
+//       slug: "maroua",
+//       image: "https://i.ytimg.com/vi/tTFBy2Vyonw/maxresdefault.jpg",
+//       hotels: [
+//         { name: "Maroua palace Hotel", slug: "maroua-palace-hotel", image: "https://lh3.googleusercontent.com/proxy/v7o5K4fkMuS18xHQV0OVHRw4VpxM4LMYvev6d57rj7Rsn8BZobGIp6EpqJXB8no60UasYRlz9IMI5FalxucNaTzEHNyTacy6sPlMzzg522EMtSp8rdqCJ714lJph3V5zLD7dxBqsmLOiDU553qx4PoiFL8V8HA=w252-h168-k-no", gallery: [" https://lh3.googleusercontent.com/proxy/1Z0Dilpf5EYD9YkUscxfFZabhUQs5KQAl1hV0s7fGfi9-9qiaQl7PjQeH2osNcyu-ryuntP3VUvESd_lofqlSg3YaPGDoWA5rrBx3Vni09gwtrMQFT4Eszgw3s_AhKKe804J9baXaxahdznOWi7E1mrE0DbBnPo=w252-h168-k-no","https://lh6.googleusercontent.com/proxy/_KQgkC8jdQqUm0Hf21cAYzPR7YRFEyyggrGQeLGDbXl84ae04wpugvcACY0FMn95N7djxLntW-2C8knrduo0uF0DKRaoExw6ICmX_yu3fxmk7-Ge6AifSTlRaMGKFt312Hd-7E9iCk36YmpC70Uw2AdswA2-IIQ=w252-h168-k-no"], description: "Popular stay with a pool and conference hall.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 70,000 / night", rating: "7.9", reviews: 52 },
+//         { name: "Hotel Bam Company", slug: "hotel-bam-company", image: "https://lh3.googleusercontent.com/p/AF1QipMPpy2QmrHbx2TyL9s5QyeMwce00Q444R2k5Kdy=w252-h167-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipMLZg7kPYrdldKHwAmHQ0DcIYC6xg0ERLtt017F=w252-h167-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4noZQCZt4ijPBtiI4J9bXUJpbKsb8NLr6QDOGWRvj9qRur-tkVIgnPOBQmrDCQ5e3wK-_xVaICyZpOLL4vZ0ry1EzlPVEiNoCPZBvDe3tz84Y-nOalsbWAjfc5_u24OB1WL6evAmvg=w252-h243-k-no"], description: "Comfortable hotel with restaurant & terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 39 },
+//         { name: "Sahel Hotel", slug: "sahel-hotel", image: "https://lh4.googleusercontent.com/proxy/LL_4maD8Hph3AY_1gLDwG8AnfpSSfWWTdRh4loVqNc0pBhQQW0yr8QuflrKylx-5hNL68899_3zyXnZCLvqL3neM6iuTNJSS3kfXvfzjCZZs1Vn90G9OUWpljHCfDugWEHGLWQ7zT_NbfOQIIMYXV127BJ6C9w=w252-h183-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2kkugcIV-bVReDvJh2a6N8jEg7AzrWPO-IpT3a00x_unBPaMG2qzLzKSp7XAXz79QFzVVXnIy7Th-37qfqmOY_Loyr-1zpZHJli3uY1DwVibOUoOYvYnz0uQ_CYE6DCoBaAFZiA=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npYSZMH7guSLrLGD06BuYw1istRrC1cFJYQvOjz9pEX2sj5lu1NIFzcU0_bm1_JcF2wB6snoBuNYUhBsWW5Yko3yNbMuASDFLpcKA2h602LxCVC6rIkwAvBR5xMHJP-QT-ILvxBJg=w253-h449-k-no"], description: "Budget-friendly rooms near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 26 },
+//         { name: "Hotel Saphir", slug: "hotel-saphir", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq6hFroQbeVxlk6-Ebe0vDsE2NM80iR8JDdWBHpZyZbbiCfAMsrgPUTY0LGFvoBMKTQw7fjNqNnQysjZjwkjAOsTXZttJRTFGZwJi7O0YNn8TASprZ2QChtNp-iOzaXvtOLT2j5yw=w252-h252-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrFDPuX10G2jLh6bli-s_xeqH1EZQo-pXTzRWReLLocOZtzcLq__wzqR-fWU-yn8MyElrCvTpsEW-L0EkllS0_5LujKjIrEN-b3Q8hUgNWQQaH_k_R8Ucmfooaxbxz8_VkckLu9=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nodFa1u3ZKUWg6hccl6XvXAQBs7lpW_DmUEzBSzslEQMZ8nArUZxX-47cHA_1ewjYH9T-cI55gSb70RDwbRbhyeOcjqziVQE2jj8TD0_KMRJxa3pMeLCeRzL4zCeFj36wRbhE1A=w252-h189-k-no"], description: "Calm environment with garden & bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 30 },
+//         { name: "Hirgoyo Hotel", slug: "hirgoyo-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noLiRkmb4iiJzaEnzvyaWGt2FhLd0whl7I7DAQzqlXLMUbhcnI0-Q5onSxqekAhk9lDNxazLtb5erZ7OIYcM3BbHcpIsjDy5L6MZ1heZU6iRTh3RkoMe7lnZCBK5h0DR1OvG8lxgw=w252-h168-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_-fYQXa533I0eNQ3jSqVKUNJY09jeF81e3xU47sT9Fm7Ubn-6359pLU9MjREOHAhjfvgO0sLANkZ6ANWgFrSjwkgqFKqllEb8reIOTCL1i5o5k6frii3auLRCHSpAsHCCukZ_LQ=w252-h168-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4np4EjZme5cJJ-IZOOVrx_HsBH5UkgYM5qBuY-agROf9FtbhqQU9nEfKfd0NwaRecRbd5jlPAAtYKqGPt1TSTjgr6Kc4POlCLB0sXuiLKWKj90_iFSbtCLqhMTcQx7P0QPFb8t4O=w253-h449-k-no"], description: "Family-friendly residence with terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 8. East Region – Bertoua
+// {
+//   region: "East Region",
+//   cities: [
+//     {
+//       name: "Bertoua",
+//       slug: "bertoua",
+//       image: "https://discover-cameroon.com/wp-content/uploads/2015/04/Bertoua.jpg",
+//       hotels: [
+//         { name: "Hotel Martino", slug: "hotel-martino", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqMQUrrIkW2Yz1Bq-Fep4kttcdZAFlSudUwoCBa160vt9pJkuIX4oF_jkn1tfLvKf4Yye25k7rCpl94Cr6PWpV3IloMv27PCXOj-AntyF1LwqvHxababaRvn1nT0fOuPaL2LKBm=w253-h449-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrGmc-EX2g9UKHe6Cvy5f0yyFUmGeo59v_JTv1nvIa5CcGrcF9oCKAJB2xHqkAtuHtudQrzvefMfP1y-KS08W1UCGimaB8w9ViMtDPnz4lckujzKCJbCaZzi6wtw1w1SM9Gfqk=w253-h337-k-no "," https://lh3.googleusercontent.com/gps-cs-s/AC9h4noXL8dkmTR9cp88Ft5k7-yT1MGGt-2d1jh2YdYD5l-KP8s73qfRTbvOqTiDmtZeuK3nTvPlKrDOiXowozLo67TD3dOI5uZc1ASNKU0Nho3A0FhhsH4t1LKhJK-PeWzxZfHB5AL-=w253-h189-k-no"], description: "Central hotel with restaurant & pool.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 48 },
+//         { name: "Hotel Mansa", slug: "hotel-mansa", image: "https://lh6.googleusercontent.com/proxy/mUIk9VvD7-Cjl_9sBda-k9Ka9yd2gJOmvDcI0u9WNXJz_UA24XzbRR1ONO-7umLgm9jeZrcFcT6bz2Icd5ucWs9XqXNKd5jWj5I8EFPaO2PcvRDEuoZgyECPuNeqZxk3v7oSYdiUl54REy0dWsOIKxsJMCpE1ok=w252-h168-k-no", gallery: [" https://lh6.googleusercontent.com/proxy/owWeSffu8jTXN1reQEY-aWM3WzXRUywxZhYUjJZCB29CxbohgsfFM16cNGU-x12jeH7t07mjYQqmY6d3vdZXa3UlE6Z_L7qM7DNsopgGEsJ99t_gLngYdNZQNpvifj6EGEg1pwPgpavcVx0DZwZEXvnkQURGIA=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4nooY6zlTyldEFljdIMVFo6iNt6iY14_ys-mPNqyVvevOqFifJLBmvRoQVD2UFiIAITJdqjyVG3_rU7qIpdzzeWqNE9QTTdf-6En3BQRdd66tZ8sUJZTe9waXfFcefJ8GNrjfS6l=w252-h189-k-no"], description: "Well-known in Bertoua for its spacious rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 37 },
+//         { name: "Hotel Massoh", slug: "hotel-massoh", image: "https://lh5.googleusercontent.com/proxy/VgiPuidDBHp2nX0oYV39zZUeoc8h0G52pM2FVb8Yo00nxKS0abP9JL6in0bRBEMg7VHnz4u6kiTS5mrq3NauBJnYxG0Oc3Jc3hYpydkwu5ZvhhwEf0YphlL2Rs72z1DmVqIfH6Ss87CC2Wns-0EciIIrzkFoDA=w252-h168-k-no", gallery: [" https://lh4.googleusercontent.com/proxy/O2fvE0qNUEOTh9zkJro8ZFGPQyXQrDhIL5AkDguncNdcxZNeuj_rAv3Zpjpc4B18KlYgZRui6a4kqCbU_j-EsnvfLcvbiF3W2_trPzRlVjMcCnrJFxmBFrdHAYIRFKMh_nofy1yX3qIGdotT06aGKDuMX04k4w=w252-h168-k-no"," https://lh4.googleusercontent.com/proxy/8k0ePvUcxSo7vLT8vN1yOCFQNrxigDmNwWLbpH9C3FbTM9byZ4Kgu9Qkfo7qjqMfk-osMvsxPwMUZVHXm8jPZRNncxAZrZwipielZnANrqZtg6iocH_Mbr5AqoJZryy_bimarqlsW1GV6kAhFgqffsGHz7kWKA=w252-h168-k-no"], description: "Budget-friendly hotel near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.4", reviews: 24 },
+//         { name: "Hotel Montagnia", slug: "hotel-montagnia", image: "https://lh5.googleusercontent.com/proxy/AKDUu-WNVsvjCQqWoFfoOBUiQ6xtqt3NtWBtYJGLwSsaNZn4CPOiTIlwRQ5IF7-3mBgTFdBRC3UNHzsD9vlA9S-0BhRF3MJAsFw2ZNbQF0K2UjwcGYtfw8O9IznqzwIRrSdhwcDUQdkafelFo7lpr36QKK8eoQ=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4no42lYJZ-0-KQonO1ZyCcphXyFrsXkDs09JMvnu3DklMQxDRAGlh1vbH_z2vx4fZnFJH8EYN82c7vAitwgzwJRfdn38bmSgY7KU1NfkzrW43KjNlWUnypN9nM0dwgzSG-VlT9tn=w253-h253-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruPQqlTHnPVy5s1KAJaIIfr1kBN7CRmqiePxo6OiuLWrPEujGeQ3g2gS_u0-xW3kQu8p-_lhnaquW-_uJ5QR2nM-AiwmPRKcjVSikcYsygj4s1gfb6z9CNb8hNVK-X_EQu11k=w253-h449-k-no"], description: "Quiet place with garden & bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 28 },
+//         { name: "Hotel Pheonix", slug: "hotel-pheonix", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npaRft2erQQN-e9aeSVeKl2gXsMk2CcWHLG-yuFHTCHbOnByEj6GHdTxCJe1Nl1zVphR6EGtULTaOz_X6qv_kzd6K0aQyeNAj0ql4EFsOFdJalb4mUhTNbLdigPv8ZYJRqbon77bg=w252-h336-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4np6pixFmBmqITeFbT-_ljfpb1YGL_ryaFvzLNPJshDRFMPIMgbFZN4xDumLLurke5krkXur3dBIyrAVu71EIj9JLxZYtNsj1u4r5bQtTAn_b1ivau_oIdmzn93cCAtXKAbaMVXO=w252-h336-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4norIqbXjP9yOG9GjlxHHQ8XTNcpojuQz3OIRRuRjIbMN-gyw0Xj4Ddf4cvYTgt3-6KMPZ6FOYw2MxC6eJmGjfuHIEOTZWR6_ewMt-KzohKfG0nFTPu8Rej8Oss38moqLwLJbI5U=w252-h336-k-no"], description: "Family-friendly hotel.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 26 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 9. South Region – Ebolowa
+// {
+//   region: "South Region",
+//   cities: [
+//     {
+//       name: "Ebolowa",
+//       slug: "ebolowa",
+//       image: "https://i.ytimg.com/vi/mLZkPo17Kxk/maxresdefault.jpg",
+//       hotels: [
+//         { name: "Hotel Ndancy", slug: "hotel-ndancy", image: "https://lh4.googleusercontent.com/proxy/iQX8nBmO9Ufwbru0nyyw_maxxxwdpQd12R1I9Fta16feJmqKvqksJDBm3HoKRgPN_maGLOfCAvDjld-BHYrbUtnB1kgqSrc7XLEPFHfV_D8f8e8sULHQajq4BvOeWCr6MNE32sF1Ccs5XdAtX2VmzdHpjt6LG6o=w252-h168-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/9ln8qA2UzbgGFR4zjltqzpiO7p5ZZPUP7pEU_PGStqemSeeQro3S9Xq6WAReDGfOJfUy8Ton_Rjt3dRqB-jgw1HfsqXYY9fo17mckprzWAN7OLb0piGcW9ao-bZz7D3WzmHWpxL8oi8Z0ulvs0ErpjnHS4GMOw=w252-h168-k-no","https://lh3.googleusercontent.com/p/AF1QipNrdUOMOWKqx1GJ3u9UMSdoz9vsizvJeM_idw2Q=w252-h189-k-no"], description: "Central hotel with restaurant & terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.8", reviews: 33 },
+//         { name: "Hotel Boulon", slug: "hotel-boulon", image: "https://lh3.googleusercontent.com/p/AF1QipOWO8hq_LCHo8b7fhqWMBrqrapQqUfncwRPgWNv=w252-h189-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/yPQfdgYFRjy_8CRXu0-8D7vINf3rkvpjIWR6ysjdpOEGAZQ5BztR18m-dCAuQwXevsrhiY1DVO9X69bdM3u7Ty5E0VIOX0jdJwq6AO225wns_Yjq9F8xTPBQYUCMqDPKwWx5maGIn2mkbG8kwd9jYCsuGerLV3o=w252-h168-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrx_X5V7sv7-KVk4-sbRKTTLl6fM9Q2y4A82_yPpyyw1QKFcyg2xL_IOssxPF6pX-OYGSTiYLD-hu9GS7KVmWWLKxrjdJkQbq6gwDEmpJ8IHhchApAKhfu1pZtNmcAQYJDSKKjAKQ=w252-h168-k-no"], description: "Spacious rooms with free WiFi.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 25 },
+//         { name: "Hotel Bengo", slug: "hotel-bengo", image: "https://lh6.googleusercontent.com/proxy/sg0Yu2XP40hONbmgdM03_IqyohqUctCQMwh4B-MkmrF0QeN5WjkZOzfX5vksrRI_HQCn9E89jeP24-c227LjOeIkDhUto2uD6MO1DbV8lBU77mWI76mhGSacyFc0JKKg_uEQgaJIoE9O3hfc6Kdaw5XFtR-giZA=w253-h142-k-no", gallery: ["https://lh6.googleusercontent.com/proxy/iR03FF8aSjv5ToXGrWe4V_JqZI1YIiHWnZJRHlgefbcp3Q3ctsJZ9QqARyMxMdeLfbqs2n2mzwwNPg8CPEN8jM4gXp-kYL8Vg5xJWOAk0RFPDc9flBR9_biekSpsi12of9NHLKKdHS0xXIph7_nFKypaUc1nYqU=w253-h142-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4notH9zOMf2QjRBQZIV0_dzl9OtMjbrtrvwIPi_j0ddrozYiNBvb7sDkCkFWU0tiVKfeEur67V5ne5xvKpWoRI5wBOy6ZW1PnINyIl1RsQL2WNLv8twRY3m_JPa7CZBW9zSf2XY=w253-h142-k-no"], description: "Comfortable stay with bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 24 },
+//         { name: "Kapso Hotel", slug: "kapso-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLQjdMy6pUbu4M2cHpaBQKJS7azBtOVB6kdq-cAisftPsHh2MTVczBqZPCB99iS4S6faPAAh8Aj-qM1XueP_mMgJBRLARXSF6S3liylyJbQJc1CglE8dCC8xCbytSOa6YMbRzZFg=w253-h113-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrbQdPuza4p4lhebOHV072qIYRDT8ORp2BIr1qmgRy5BlLMeXOEfCfT9HANdEbAcC1EyPGKPiSFiNzrCjd-ZYZKVIGqJDkZrE8NSlqmf6-2qoCC1W5z7_lhkiudWUCBh6TMvhDM=w252-h448-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqJvu4wXeIhYMRtBVs-9KOZp3aLspZMhtS23pJfj_5URP65mRX0XTRbW_UOVJyksE1i05U6_z-wssmcKyPfMCK80XwsvrF6tCaFADLPqmrUI0GUeEQXrBoxT0eHG5jB_abTB7kS=w253-h142-k-no"], description: "Modern hotel with parking & garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.6", reviews: 26 },
+//         { name: "Hotel Pluminite", slug: "hotel-pluminite", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noIdOircQikvRSAaHc5ubakb44hfydcKtWT8Ev-GJqJ_rHU_4II6SP_6cxcsHBj3to05Z0Ffg0k07mu7pj0_ff0Lq8TQD-ZSIPh99v8n8zCWfttg4voWucSN1lv4YiGy6yTLoU=w253-h337-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4no8m_InJ76Vp8w5NeC3uqihPb1a_fvR4hHfrp_pKijxPx5pSNGQROOg9_GG7G_HRoMv-3oqhDDi0Owpw79eevCBnyBeVqT2bZcVM6iXQOQ5kCudaAbJgFLwHC_C8PjDR6-qN7krpePGybfC=w253-h190-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npJElHuXZe5bC59Ai4_K3YHyyrahIo0GIGlLFMjLbgFJ2UMzQa_g_71RwGexubJIoH0AsbhbDciQvwLNXdk3LSihGhX_fgF9UJzSlqw2dfLCHxz6iXEGHModuN1L-pjagoiKMSxIcUqqEA5=w252-h218-k-no"], description: "Budget-friendly rooms.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 20 }
+//       ]
+//     }
+//   ]
+// },
+
+// // 10. Adamawa Region – Ngaoundéré
+// {
+//   region: "Adamawa Region",
+//   cities: [
+//     {
+//       name: "Ngaoundéré",
+//       slug: "ngaoundere",
+//       image: "https://www.shutterstock.com/shutterstock/photos/2456142031/display_1500/stock-photo-aerial-of-lake-tison-ngaoundere-adamawa-region-northern-cameroon-africa-2456142031.jpg",
+//       hotels: [
+//         { name: "Hotel Plus Sarl", slug: "hotel-plus-sarl", image: "https://lh3.googleusercontent.com/proxy/2uXBaxUdyQ_1T_dwyzKVmYDZq9ZdqR9YHS0XWonWKiSU5Wj9587D_PK3xC7VXE4R98O97J--cmPROkno0KZSUriVA1STzkR-HDSxMoFfh-Lx9PDdfY6l14PkTqAQO7TxRDQrfPT1PWIUfoP_seeFYSOyRw3lSj4=w252-h168-k-no", gallery: [" https://lh4.googleusercontent.com/proxy/XS5mc2WIuhdhMQE4cmdeqCoPwKmFDdjxeTud8rLpnyeCItTgX-b0eXSReQx63I2tghJ7j2la_v84Akwa0FNzKMOqeeioBhTd3OKvVlnX99URkUBAUUiTSzXjowKP0sIp3XynKxI09OWxzpSu59x-lZpBOXAW1g=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npj_FFwvsyd0UQEzdHg7A6TyqbdmfQSowrg0_UdXfAcF5ahQU4y75sHhY9SKaUd1DpZ-jchwONA-bPBcowKyN9z3-Itgt_sOHaH8HkRk-WZ7ndVmIJd-6h4MDrzfn71aSksSAjS=w253-h562-k-no"], description: "Central hotel with conference facilities.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.8", reviews: 34 },
+//         { name: "ZEN Hotel", slug: "zen-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipMMan5SVkZCNaYg1guFQIyjFGFDO_nP312Osb4=w252-h166-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipODlXy_KmpNm3hIIIWnb3HO3jAspdQzyj3yNHE=w252-h167-k-no","https://lh3.googleusercontent.com/p/AF1QipM-UFMoBAZv94y9lhoMmt3owTAtWchndaQyyjc=w252-h167-k-no"], description: "Family-friendly residence.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 25 },
+//         { name: "Hotel Vina Palace", slug: "hotel-vina-palace", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqthEzfWkzTfMhbJMT-EsVKU-bai9IcfDBadQbxjAIiT6cTVX4y5W5ig_EsB2fB_RGdf36P7ek-b0LLpczTs5_Y--7Of0PzrvqesTCNhvKQolIMGHRmkNy1OPs7j3ufvK__SDlu=w252-h336-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqMgSeE1bnW-y78l5zSdw1_K-_mCYfuUEoOkzXCmOKdlz-wYp4NAIZ5HRlVRMIOjU3738h7tkw_bd83ct1zT33G42pvAu0c0mBohyU-NtrI36Z1YViaI5L7B8BTBiZd1dkT4C0h=w253-h142-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npkuOmV2sk1L2ejz07c4G9y_MJFxJjDRAKcJ9UuDjo-GIeyryz_eim8JHukZsnqMweEDYUxTLw40aqpuJ_bIxqQZmu07zs7dM1a_d-E4LX3Uoskr75uvuwM6q7ddXtvRyMR5VMF=w253-h337-k-no"], description: "Budget-friendly hotel near train station.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 22 },
+//         { name: "Transcam Hotel", slug: "transcam hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no4z2VV4w9bHXeSvMQd5GL10eFPdBktVn_u5LcNuZmkWCg_xCjygvA3NS0DXyO_5hEI1wB3UoMVOdl9oiFWDmSiWQpwhc9WOYxjCfKCO4Q6sCVtUmFdcumstl-TIBfUmOgxLko=w253-h189-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrFUtVTbfkwpSObsALAVf5yKUARJXkAVzWuDPqF9s2IHKCy9cvQBsFq6WEKe_Bp12PjeAqL23NV6Yj_hbCPeh-yvWWpH49ROpxkJePk4n-kZR3Trwddpy_320r5Ck1XuWPjNw73=w253-h189-k-no","https://lh6.googleusercontent.com/proxy/Mab16cKGYxfyGgtBpW32WCqfixGYdMOfjejK4oBDb8NNpX76i0jO8A1090P2VrZTI7nUo5TlCGwVjDNhPg5miQ0p-cJ8FygitEM_HB2Q_Uuxia0K_oEgsjLExuGz6PlAViQeBnTgVxf4JwJ2SzdGQc73rJlRcw=w252-h168-k-no"], description: "Calm environment with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.6", reviews: 26 },
+//         { name: "Hotel Mentong", slug: "hotel-mentong", image: "https://lh3.googleusercontent.com/p/AF1QipP2gakiE_qNiuuvxDBjFI8FbKpKbkU83hN--aY=w252-h167-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrGhL5tkbaLCw9yk-RwAAgHzi4xd8mG_slja06aoFtfYJ_CXSleE0r_tVqS-vzgHTSOVCW3ZXaoQQux0pO6NueHcRu3eo5X0g_356EqFGGVLGMJ34dTFVdWvBPcACe_JYBJTNdl=w252-h167-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4np0disCWeTcJWc-ho22TDNkjOaqNsLYoafmwNf3jDj8gMJCJ3HTDk4RRyDDvZXOka7LahB6pw41ePf6mhWGuwOzg-I6JESvBq5ti-zsKNwhtQI9amo3E2p0g8yaOSgeq2XJCTyl=w252-h167-k-no"], description: "Affordable stay in the city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 20 }
+//       ]
+//     }
+//   ]
+// }
 // ];
 
 
@@ -178,185 +202,166 @@ export const destinations = [
         slug: "douala",
         image: "https://i.ytimg.com/vi/_5z1gxelv8M/maxresdefault.jpg",
         hotels: [
-          { name: "Akwa Palace", slug: "akwa-palace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/AKWA_PALACE.JPG", gallery: ["https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg","https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg"], description: "Luxury stay in central Douala.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 144,500 / night", rating: "8.5", reviews: 171 },
-          { name: "Krystal Palace", slug: "krystal-palace", image: "/hotels in doaual/krystal hotel.png", gallery: ["https://images.pexels.com/photos/221064/pexels-photo-221064.jpeg","https://images.pexels.com/photos/221066/pexels-photo-221066.jpeg"], description: "Elegant hotel with modern rooms.", amenities: ["Free WiFi","Breakfast included","Pool","Spa"], price: "XAF 279,906 / night", rating: "8.3", reviews: 142 },
-          { name: "FAYA Hotel", slug: "faya-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/faya-hotel--1024x910.png", gallery: ["https://lh5.googleusercontent.com/p/AF1QipOgnGa4LeR5-xKqUcMtIJdGXiWdS4xfjS6OnTUx=w592-h404-n-k-no-v1","https://lh5.googleusercontent.com/p/AF1QipNVmSCbdN1zwAwZpi7sk0CRuD2u4RQCe1_Y4_-a=w592-h404-n-k-no-v1"], description: "Affordable hotel near the city center.", amenities: ["Free WiFi","Breakfast included","24-hour front desk"], price: "XAF 89,100 / night", rating: "8.0", reviews: 95 },
-          { name: "ONOMO Hotel", slug: "onomo-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/ONOMO-Hotel-Douala.jpg", gallery: ["https://lh5.googleusercontent.com/p/AF1QipPUjMExJuMnHQSIjAQaDLewyczYo9F_wzRe3bov=w592-h404-n-k-no-v1","https://lh5.googleusercontent.com/p/AF1QipMvfW5QJjQXbdFijJ029ea79FRXgYm-vkmwXASN=w592-h404-n-k-no-v1"], description: "Modern hotel with pool and business facilities.", amenities: ["Free WiFi","Breakfast included","Pool","Business center"], price: "XAF 133,974 / night", rating: "8.4", reviews: 120 },
-          { name: "La Falaise", slug: "la-falaise", image: "https://visit-douala.com/wp-content/uploads/2023/08/Hotel_Residence_la_Falaise_Akwa_Douala-1024x768.jpg", gallery: ["https://lafalaisebonapriso.com/wp-content/uploads/2024/07/banner02.jpg","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/81/6d/30/piscine.jpg?w=900&h=500&s=1"], description: "Luxury hotel with sea views.", amenities: ["Free WiFi","Breakfast included","Pool","Spa","Beach access"], price: "XAF 151,200 / night", rating: "8.6", reviews: 130 }
+          { name: "Akwa Palace", slug: "akwa-palace", image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/AKWA_PALACE.JPG", gallery: [<img src="https://hotel-akwa-palace.com/wp-content/uploads/sites/167/2025/03/23I2194-2200x1200.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/368719737.jpg?k=9a54807145938af9e685f3a5275f4e526837084d444507b9c4b92076f629bcea&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src="https://hotel-akwa-palace.com/wp-content/uploads/sites/167/2024/09/DSC09712-2200x1200.jpg" alt="Reception" width={600} height={600} />, <img src=" https://cdn-zen.readytotrip.com/t/1024x768/content/43/f2/43f2acce2e1da7c9ff8b28f3bbd4a8a2530d12d7.jpeg" alt="Bathroom" width={600} height={600} />], description: "Luxury stay in central Douala.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 144,500 / night", rating: "8.5", reviews: 171 },
+          { name: "Krystal Palace", slug: "krystal-palace", image: "/hotels in doaual/krystal hotel.png", gallery: [<img src="https://static.readytotrip.com/upload/information_system_24/3/2/4/item_3242005/photo_86193883.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://webbox.imgix.net/images/ehevammvaxbekwso/31f58678-fb0c-4d4b-9cf8-97c79f572b86.jpg" alt="Poolside" width={600} height={600} />, <img src="https://sortiradouala.com/assets/uploads/activity/KrystalPalace/image_1706784449750.webp" alt="Reception" width={600} height={600} />, <img src=" https://webbox.imgix.net/images/ehevammvaxbekwso/db010135-703d-4e81-93f5-c1e402e4734c.jpg?auto=format,compress&fit=crop&crop=entropy&w=1600&h=600" alt="Bathroom" width={600} height={600} />], description: "Elegant hotel with modern rooms.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Spa"], price: "XAF 279,906 / night", rating: "8.3", reviews: 142 },
+          { name: "FAYA Hotel", slug: "faya-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/faya-hotel--1024x910.png", gallery: [<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/332729383.jpg?k=75744715795bcfb90776aa4777f50fc5778f3fceb33d8ef8592173518adfbcc6&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/335504418.jpg?k=6bd845658394ab0bf75110617e8f0147c668a3932502d6dac8bbc6536c0653b0&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/719895932.jpg?k=3549568c6e6e3eb161ff7506c796ae6e3ccff366d4b1c08d95219a4cdfa44b42&o=&hp=1" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/74000000/73410000/73403100/73403051/74f9ed74.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Affordable hotel near the city center.", amenities: ["Free WiFi", "Breakfast included", "24-hour front desk"], price: "XAF 89,100 / night", rating: "8.0", reviews: 95 },
+          { name: "ONOMO Hotel", slug: "onomo-hotel", image: "https://visit-douala.com/wp-content/uploads/2023/08/ONOMO-Hotel-Douala.jpg", gallery: [<img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/4450/media/653926c5eb1d2_1698244293_FB_IMG_1689857693456.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/448026958.jpg?k=25265c722086c909eee404d0b8198964dcefd95acb03ce8520a2de408a7cc4da&o=" alt="Poolside" width={600} height={600} />, <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/47/cc/76/onomo-hotel-douala.jpg?w=900&h=500&s=1" alt="Reception" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/38000000/37950000/37948400/37948379/d0c644a2.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Modern hotel with pool and business facilities.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Business center"], price: "XAF 133,974 / night", rating: "8.4", reviews: 120 },
+          { name: "La Falaise", slug: "la-falaise", image: "https://visit-douala.com/wp-content/uploads/2023/08/Hotel_Residence_la_Falaise_Akwa_Douala-1024x768.jpg", gallery: [<img src="https://lafalaisebonapriso.com/wp-content/uploads/2024/08/master_suite_lafalaise_bonapriso_02.jpg" alt="Bedroom" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/585598266.jpg?k=b99557756f3c87d3e6ac61534c8c10427d06f574ee9447b1c34b2017ec3d98e6&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src=" https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_267,q_40,w_400/partner-images/ea/9d/c166e33ba931dd43a68bc0d4262dbfd681b1774bfdf0e9233033fb101068.jpeg" alt="Reception" width={600} height={600} />, <img src=" https://y.cdrst.com/foto/hotel-sf/bcacaf2/granderesp/foto-hotel-bcac048.jpg" alt="Bathroom" width={600} height={600} />], description: "Luxury hotel with sea views.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Spa", "Beach access"], price: "XAF 151,200 / night", rating: "8.6", reviews: 130 }
         ]
       }
     ]
   },
-{
-  region: "Centre Region",
-  cities: [
-    {
-      name: "Yaoundé",
-      slug: "yaounde",
-      image: "https://media.gettyimages.com/id/sb10066698pr-001/fr/photo/presidents-palace-yaounde-cameroon.jpg?s=2048x2048&w=gi&k=20&c=w0qaWEYsTU41C3ZyTA_q-pdDViXT0Z19qMvPCcZlKok=",
-      hotels: [
-        { name: "Hilton Yaoundé", slug: "hilton-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/cc/85/e4/pool-exterior.jpg?w=600&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/d2/36/d2/hilton-yaounde.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/56/c3/83/hilton-yaounde.jpg?w=1000&h=-1&s=1"], description: "Upscale hotel with pool, gym, tennis court and central location.", amenities: ["Free WiFi","Breakfast included","Pool","Fitness center","Conference rooms"], price: "XAF 220,000 / night", rating: "9.0", reviews: 250 },
-        { name: "Djeuga Palace", slug: "djeuga-palace", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ec/44/c4/entrance.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/d7/5a/ee/photo1jpg.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/64/ed/70/chambre-standard-twin.jpg?w=1000&h=-1&s=1"], description: "Elegant hotel with swimming pool, restaurants and nightlife nearby.", amenities: ["Free WiFi","Breakfast included","Pool","Bar","Business center"], price: "XAF 150,000 / night", rating: "8.7", reviews: 180 },
-        { name: "Hotel Marina", slug: "hotel-la-falaise-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/b7/ca/14/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/fe/0d/f2/king-suit-la-chambre.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/7f/51/de/offrez-vous-un-moment.jpg?w=1000&h=-1&s=1"], description: "Modern rooms with city views, pool and fitness center.", amenities: ["Free WiFi","Breakfast included","Pool","Fitness center"], price: "XAF 120,000 / night", rating: "8.4", reviews: 140 },
-        { name: "Star Land Hotel", slug: "residence-hoteliere-jouvence", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/22/00/38/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/7c/4d/a0/caption.jpg?w=500&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/d1/8f/84/studio-meuble-mini-prix.jpg?w=1000&h=-1&s=1"], description: "Comfortable serviced apartments ideal for long stays.", amenities: ["Free WiFi","Breakfast included","Kitchenettes"], price: "XAF 90,000 / night", rating: "8.0", reviews: 95 },
-        { name: "La Perle Hotel", slug: "franco-hotel-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/b2/cb/caption.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/6b/91/caption.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/6b/8d/caption.jpg?w=1000&h=-1&s=1"], description: "Well-rated hotel with bar, restaurant and city access.", amenities: ["Free WiFi","Breakfast included","Pool","Bar"], price: "XAF 100,000 / night", rating: "8.2", reviews: 110 }
-      ]
-    }
-  ]
-},
-// 3. Northwest Region – Bamenda
-{
-  region: "Northwest Region",
-  cities: [
-    {
-      name: "Bamenda",
-      slug: "bamenda",
-      image: "https://t4.ftcdn.net/jpg/07/09/51/09/360_F_709510932_0xdJMNijjTOZQw7FfWQnN9Cl6utwPDW0.jpg",
-      hotels: [
-        { name: "AZAM Hotel", slug: "ayaba-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/9b/f8/8a/azam-hotel.jpg?w=900&h=500&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/9b/f8/6b/azam-hotel.jpg?w=1000&h=-1&s=1","https://images.pexels.com/photos/276085/pexels-photo-276085.jpeg"], description: "Well-known hotel in the heart of Bamenda.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 90,000 / night", rating: "8.0", reviews: 88 },
-        { name: "MAWA Hotel", slug: "blue-pearl-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9b/d4/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9c/da/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9c/c0/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1"], description: "Modern hotel with city views.", amenities: ["Free WiFi","Breakfast included","Restaurant"], price: "XAF 78,000 / night", rating: "7.8", reviews: 65 },
-        { name: "Top Star Hotel", slug: "upstation-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/a5/e3/79/getlstd-property-photo.jpg?w=600&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/ab/fe/30/top-star-hotel.jpg?w=600&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/ab/fe/2f/top-star-hotel.jpg?w=600&h=-1&s=1"], description: "Budget-friendly hotel with conference hall.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.5", reviews: 40 },
-        { name: "MansField Plaza Hotel", slug: "chariot-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrn-4lBWUc2R77R4dIpdn3kg-_EyR2b2TD4nFAUCFjR89nQeQslr0v82xvx3lobmbhhnUk_MzKqVn66fJglffmyuNAeKORTCj0R4zZ0J9gf414E23_QCQTI6slU0sqOxTRejuhe=w252-h189-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4noFirTa5yAsVunoFREHcdVjk_Cg83pCIHnrddTotpjUMegsmn4CAK-rgnbfmtPwi_5DcyEyzJrq8HrfYA0QnfdYqdcoN4X-jaDGjO5aNiFp15WPxsTeIck7H6BngzFzEMHG4nUAOg=w253-h449-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq0b4OSETVbuJ37qWWhaeHV0GehwgDiQ0yM6Aqv8MCcpykI4gAEVHH152N2KJS3htFu3N9eoE1gzzk1mzRnQEt4822Hkvuk4ygwMOp_Z5vaa0XNFFSVD9VNDarIYfolGt9HdvbZAg=w253-h337-k-no"], description: "Comfortable stay with restaurant & lounge.", amenities: ["Free WiFi","Breakfast included","Bar"], price: "XAF 60,000 / night", rating: "7.6", reviews: 55 },
-        { name: "BLue Pearl Hotel", slug: "mondial-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipNDjwqRwPkZVyNm5rq6xS78ZXJyttE-N6zK5VGO=w252-h168-k-no", gallery: ["https://lh6.googleusercontent.com/proxy/Wo2SpatxUPWZm0wPUzAqbKu3NDl3vC1SpdPVsSw3FJP6i1LFzP9LsJPDjFIrCPNx_g-7syhTScdSwW5PJiyRzt7_4U0-2hlr_97EHJfGkNaD7Cgd5FF5h0y9WALFhSAaqAyB-iMQ1KZE-nSZQOJqsvRJpajntQ=w253-h186-k-no","https://lh3.googleusercontent.com/gvs/AKFkxhv9kGO_njNcx33Aszi3CrbKEb4cpk7Z-zyzFTt4x9K2WBSyBSdTotIBi-geenimyFWsG5pKplwwLugNHoL7KiODjSY9dHDPHrJU"], description: "Boutique hotel with clean and quiet rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.9", reviews: 43 }
-      ]
-    }
-  ]
-},
-
-// 4. Southwest Region – Buea
-{
-  region: "Southwest Region",
-  cities: [
-    {
-      name: "Buea",
-      slug: "buea",
-      image: "https://live.staticflickr.com/3792/13895086893_894467b6cd_b.jpg",
-      hotels: [
-        { name: "Hotel L'empire", slug: "hotel-l'empire", image: "https://lh3.googleusercontent.com/p/AF1QipPLUA49FiR01RoTwvt0lyCv4FjudJoJdIPfYWJe=w252-h189-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/FX2XGrce6FNeFsbVzrpoNV9cizhKX_Xx-W8ViJy6z1luIxPfFne_h1Ap6lq16FOT6Jq9vprwXoNTT6ner3Q2Lak8jOI7r2WUZV2Ru0ml3lKr4osOxZzhJxWEuXle1H9FdhRGbaBa1IzWArwSOrVM-5pTGLqf3EA=w252-h189-k-no "," https://lh3.googleusercontent.com/p/AF1QipMGklAurgy4hZCrykLf7LFJF0Oo5nfQK2Qx_YmJ=w252-h189-k-no"], description: "Famous for its mountain view and gardens.", amenities: ["Free WiFi","Breakfast included","Pool","Restaurant"], price: "XAF 95,000 / night", rating: "8.2", reviews: 102 },
-        { name: "Hotel Pinorich", slug: "hotel-pinorich", image: "https://lh3.googleusercontent.com/p/AF1QipOJzTx7OKLeF_2_0LdveqYUnX3Z6mqNHujSqHGK=w253-h337-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipMoVnkYiFm1VmuTbQPEcIdOjmkRCzgk2mQVq1aE=w253-h168-k-no"," https://lh4.googleusercontent.com/proxy/Q751B0z9oyKN48LCu_RihwO59BUX_Epz9fbFsSssPdtqHOgTyOjLCWJsWiNAGCnficgo89N7esA1D1rmbfNFeI0EBTtGtgcWtzPIe9Bp2yvinxymggab0JLUaRDqyU7C8uBmq2YPHFhCU-y_1U4-nZ5Lnq20Qw=w252-h168-k-no"], description: "Long-stay apartments with hotel services.", amenities: ["Free WiFi","Breakfast included","Kitchenette"], price: "XAF 80,000 / night", rating: "8.0", reviews: 67 },
-        { name: "Hotel Saint Claire", slug: "hotel-saint-claire", image: "https://lh3.googleusercontent.com/p/AF1QipMm6tYAsXdDGSG5WXvaFK6yCRXUwvH5jwjyH0g_=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipMO10f9wOWAQNqTnyTLaUi5m4mqG6bDEEq4tQSV=w252-h336-k-no"," https://lh3.googleusercontent.com/p/AF1QipO54ZVREWPIbxx0BAWSwmxWUL0Ziol-K1x7Mglm=w252-h189-k-no"], description: "Centrally located with conference halls.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 50 },
-        { name: "Capitol Hotel Residence", slug: "capitol-hotel-residence", image: "https://lh3.googleusercontent.com/p/AF1QipMVwm3AmpAkOdwwjK4ggmG0qYAyMZ7JploLt-5N=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4noFVSmM1NcWFT7lIxFsFqM1mzQ9Ybpxx_I0lurjxIdyYri3VhO2JQC8T1M5igHDREdgYoP29808bGJNuEvSGEd8a-j2OxJAZl21ZFO_X5L6GwU7fhenncu4Qmq9j5oUH0_z0IU=w252-h189-k-no"," https://lh3.googleusercontent.com/p/AF1QipMJTwky4Ut30D4Nv-nCd-Jk3KW_Tdmx2pBoAW7D=w252-h189-k-no"], description: "Affordable rooms with restaurant.", amenities: ["Free WiFi","Breakfast included","Bar"], price: "XAF 50,000 / night", rating: "7.6", reviews: 38 },
-        { name: "Mountain Hotel", slug: "mountain-hotel", image: "https://lh3.googleusercontent.com/proxy/8-ooj9aXf6fqXhhtccmN-HiRzwxL0IZdRstZdqdc9UT3IYNK_TY1C1LRU8d1qiL75Z-At_ANXWUGjmvCk0igb1T8-7a0SDXOl-jToqUQ8hl9i-Kj96e4VXtp037hb0GQnEJV74BRCKsEFn5uqi-9aAFjqGmvuKE=w252-h183-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4noXr7BV1TtqNHMvcdzE1-dlikHPnQ5y8golBAVzNmi3CueBaRVNZgx155x9Smo_4oL6iz3NQFN27ccr7lbv1d3OqkfH0uspKMAdIT6oBmuUFVVUtIr67DG58BwF_P_lCfARerSX=w252-h189-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npKBgzdPBoIC4KttV6Ms6v6hxYfxcH8aXDMpxJH4uke659dhpvvY3r-SoYLS7VUGlpYOjmub_ai1GvR5Wv0O2ZB6MxTGEpmXn3FKbzkkESRoGSfv-8yW6KW1hlJ5Xw2Msz0jML81A=w252-h189-k-no"], description: "Boutique hotel with cozy rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.9", reviews: 42 }
-      ]
-    }
-  ]
-},
-
-// 5. West Region – Bafoussam
-{
-  region: "West Region",
-  cities: [
-    {
-      name: "Bafoussam",
-      slug: "bafoussam",
-      image: "https://www.shutterstock.com/shutterstock/photos/2308753449/display_1500/stock-photo-bafoussam-west-cameroon-february-youth-parade-at-the-youth-festival-in-bafoussam-2308753449.jpg",
-      hotels: [
-        { name: "Hotel Zingana", slug: "hotel-zingana", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/39/52/31/hotel-zingana.jpg?w=1000&h=-1&s=1", gallery: ["https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/c9/7c/50/caption.jpg?w=1000&h=-1&s=1","https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/c9/7c/51/caption.jpg?w=1000&h=-1&s=1"], description: "Upscale hotel with modern decor.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 95,000 / night", rating: "8.1", reviews: 70 },
-        { name: "Hotel Altiltel", slug: "la-vallee-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipNiqGfvLt9u8NRsaGbOvlZyHG7iheJ_zw3vd_c=w253-h253-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipNJc8Es8m_1E3y8f_N9j8J-Xup5xomzX9kdbNM=w253-h288-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npaY9sogphFTDZ5eaw6qbHRa_E0dM9RimI1BS4wukPUvBlckiAnVxGh9e9EjictRNKlf07TzLz_ncbmkCgfPlUZ3tb5HoTMS8XkxCP2RfjAfioDIJ3ZEB1v_EMXjdC1_5zU9TjrMw=w252-h336-k-no"], description: "Charming hotel with mountain views.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 45 },
-        { name: "Cergy Pontiose Hotel", slug: "talotel", image: "https://lh3.googleusercontent.com/p/AF1QipOfCbj-5XFg3D1mcPyFivrSl3U-SRd90hkZeAbD=w252-h155-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4np05_wxAPsiyTIhmkA4zB1k2zEOPYkdnIIc415_0nijMrDsp9v9V4inXMP84x-ZC5eIRM_h_kqyx6tBTPmaNGn65XyCAS5-JJBF2tyMO-5aDdlKpUdffRx_a7yJyEp2vsmoj7OJsQ=w252-h167-k-no","https://lh5.googleusercontent.com/proxy/B3S_apttiwe2XBy2W-mgTRhtB9COzKs0nDP6g2PTEUQVXu2Hy4CD1ylE6mMbmFWdbt-sLoaYvdCARX0wosrqclp8ZRgKvjoPlSkinzOvpCrllMMAC2DC6NxZoD2UxQWbjshfLRTlvl4AhE__tJ_uGuH7xEmQSQ=w252-h168-k-no"], description: "Central location with restaurant.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 40 },
-        { name: "Hotel Talotel", slug: "manoir-des-princes", image: "https://lh4.googleusercontent.com/proxy/i05QeDKm1ej1iL5IxbO__1nqoZS1Iua1sJNabBYTk9Y_QxbegGHnpAQknBUi63DVvAfJqTr-n4PBEGr_e8f4XmwEnLEWUyZeagWn1Rtl6_ho6El048_GRHRxmKvIpjhOJgyfjl-WjBfgghjJj1qteTUIHn7jrPo=w252-h185-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4no7JFr1EHMCoNMvoItLIRaDEhtqOMP9h8aP8DT6FPsKnN_qniehYIHmsbcFMYPMWT2vya5sA8qptjrkmxc9I6CKq9JX_J6pjqzZGdKl9s-0hShkTVXNrmdJmXpxSm6yKazn4XR-=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npm_dWFTlKhGqsJEAVpl_okoNSf5Qf0-5oyE0h7aJ9KZIkXcyk8qIYASeoFy7DGVMTz_8Xh5FG0eUpjwOm_UImKWDBgerCV42EDgc9Pm75yiFcS6uNMh2QyViR2EfiPyr9onpF2=w252-h168-k-no"], description: "Boutique stay with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.9", reviews: 42 },
-        { name: "Résidence Sare Hotel", slug: "residence-saint-david", image: "https://lh3.googleusercontent.com/proxy/2fN3zyDnqn85ZTfmDo3VgVSCDXZ8a4xeC9RNuCrksFtR2dhJkTkRc0eLnMNZBT7mmiFDEkc0RH6cRFslQhNt7wVokGWt3oO9x8IvclrAHxla5GYUCzWDlptiwaBV0hxQMbxO9V-At6_q-SmSPrLzvQCPThZ_hQ=w252-h185-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4npVoePxr8QY7idnVXyWJZAdDjfLixywF4u92fvdQfj1AaurleNkTfwQHGORml4oYkGR2Ce91Dbu2e4Bv96w_KLh_7zTENqWSsw7zurjsIyq-IAJxML6w3mqoBLeC2jDJ3MMOrQ=w252-h189-k-no","https://lh5.googleusercontent.com/proxy/g-MDc_me3DlK3cu0sgIPPTYvOQvXuujj7Ca2U33C5ScQY-_By_c1dFocKreHpNugl_tBisneqgq2DFijTaGjxhuJFMcHoVpPKbBk8CcRedYE9Dq_4H4EZUta6_IV0mxVlijOmoZ03yNikEb5-El41fqxe_VeCw=w252-h185-k-no"], description: "Family-friendly hotel.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 52,000 / night", rating: "7.7", reviews: 33 }
-      ]
-    }
-  ]
-},
-
-// 6. North Region – Garoua
-{
-  region: "North Region",
-  cities: [
-    {
-      name: "Garoua",
-      slug: "garoua",
-      image: "https://irawotalents.com/wp-content/uploads/2018/02/ID4.png",
-      hotels: [
-        { name: "New town palace hotel", slug: "new-town-palace-hotel", image: "https://lh5.googleusercontent.com/proxy/cdCDsBDWujxDU-jJWBVFkWsV4bRMbnImxGDxt9eFYpQhBc11hxHO7RPLAiarOn53tT12MJLRYKWW_rLL9LQRlj-bILj3U1ZlyVRhH7Gfh2ByuR_yqmbxchwPVejbFs_7eiz9G42TSYABFRl0T8S1J1wstlomcP4=w253-h122-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrDBUXkxVOAiiqynWYRZ2aHoIe1NXYlX6M4ntefrDeSqStBu7YEsKK2wuWLcIgFoumNI-3yzhwzqic2I70Ic56_zA7FpfHbhQDnmfUvPnz8WScwOKhkGaMGTTA5czGHWVJzhHga=w253-h189-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4no4wizRM12ubsj7TjN1twuqSPbkhyYSvX_2wWQNmvYr3A8Y2X4WA4v_jKubwdvshfoG4zMDyL0BW8iTwm45PwjuVa4EjRfLGdEmA12ZA2Lx0nvUMk3E0c_qSWaniGc99Jq1qk8pKg=w253-h142-k-no"], description: "Classic hotel by the river.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 55 },
-        { name: "Hotel Rebadou ", slug: "hotel-rebadou", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npsxmI3FmJSNGE5yMzneQg0APIfKtCnRAW9-60VhXCLra3e-BMrBzjIQ9piMAsN6ulXuYqJNWG5b9RuxjqKr-c3Zwd-9Ega5LXt8iivByYSLFYmEnYLUwI08t_K1BuVRLSZPA0E=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqYYskCMRcTobOK-f0NuAAUCaqXXmmYn_R7mLyrStb2yPUj0jsNn-oqWin3AGuLlmv99o5m-AqJAIwCirV8GPcX_mtOOht-thtXw4U0v_ie2QU_CaFsPilzWIKGh9hedTpJOgff=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr-IzMGgVUSpvvmjg4yv587tIeCdk5MK2P2f1IIWuC9A4BTbcG39orsT1vTyDEu5pdEzvLaIYWm3-RJcDZUwFm9VVa7680QO-wDj5JMUSvOHD1YaJGubUoInBroJEZtZeBUmWlQJw=w252-h189-k-no "], description: "Comfortable hotel with restaurant.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.6", reviews: 38 },
-        { name: "Hotel La Benoue", slug: "hotel-la-benoue", image: "https://lh4.googleusercontent.com/proxy/ukwTw2r5_g_x8wsP5Zrf7CqjPLHOjadtCVAhAZ77XSyqRHH-oj44mPGKx80VKnOzS55hoScHshV5cu8VhqaJLJNTJZ2t_oqfbp_yQ9xZZuRH5tt572V_W_1rHmDEUJI8ol7AxxiPWFZuYlXiIc7HTmJ-9V5JJw=w252-h146-k-no", gallery: [" https://lh5.googleusercontent.com/proxy/zRpjOJo1f72_IIBRhavlSSl8K407rKubGlnTI6K58GYv9yf2oGJuWqgho3iE5MdC4joZ7V27Saxvalm626J5DwF8XH9NCAH9oyc5Ut93XcDQUOqGOAZOKsQ_LviaBOs1Yw7-sospIr5DemKiEYiq9nHj8NYbCA=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_wyJBvCC6agAIKEFQTIWo66XVsciV3AyAscBwrK8kJyVZGeC_GEjEtNixA_3rcsSVJku7vihSKks17ldQkFjoI5RHvP1-PNuf37G7UzSrgAeaYTzTt8lSd2qQUSvJ3hK0r9vzpQ=w252-h189-k-no"], description: "Budget hotel in central Garoua.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 25 },
-        { name: "Shalom City Hotel", slug: "shalom-city-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipORUf8gjwU1qE89gZTXFp4az0Xbzpko5L0gjpJl=w252-h378-k-no", gallery: [" https://lh3.googleusercontent.com/p/AF1QipNm6Ma331PmGv64OgCNaEANVa68WAzSEnpvXVeO=w252-h320-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npqLYsJ5ik_kcM1w_TOHDh_vKNvuhW3wKBufZKSPLezLoAzrgYz1VQ7tpGT4KcMRNrkAXInT4VO7S3RwmMTYaZeM4HTfJ4uK38BlIC1BcYVo_EHYAuqMq6Rj20bI7nzayofNZvl=w252-h189-k-no"], description: "Boutique stay with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.7", reviews: 30 },
-        { name: "Christella Hotel", slug: "christella-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npMUcM_JtbPqMiPPdWb1vsX-qPQunJ2UxKPIrkOrsIV1jLz_fZ4hYktUzXM8Y0V0lxbBx3YWJpvVjC5jtq7bka4MLVRjQM9bmCRYEmIHbpiI5YaHDNqr93mSiuMTUMZs6Qfzj0omA=w252-h448-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqesMM5c2DKy480e36HonJBL8fyF8xM4CV2RsfZpHn166b8bgODEcoefARjBTF4EElGSDh18ecW_3YJ-oyRQb2VGm1nB2FiPtY0Ge-w0S2kqHtLKphiPDMYK2Y1aQR1HFCtEO3G=w253-h449-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqgC640fnGVzeEUwaJAl0xOeTZN9ngnLTy2Egx7P9xcJZf8hJ8rrMzBtMKEmjFumDhu34kH58eMIhkXi64_H77SpQYOv7TRq2NcU6TE-kK8Bo5B9pwYAKOjxdy6mfkhzjDC_lE=w253-h316-k-no"], description: "Family-friendly residence.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
-      ]
-    }
-  ]
-},
-
-// 7. Far North Region – Maroua
-// 8. East Region – Bertoua
-// 9. South Region – Ebolowa
-// 10. Adamawa Region – Ngaoundéré
-// 7. Far North Region – Maroua
-{
-  region: "Far North Region",
-  cities: [
-    {
-      name: "Maroua",
-      slug: "maroua",
-      image: "https://i.ytimg.com/vi/tTFBy2Vyonw/maxresdefault.jpg",
-      hotels: [
-        { name: "Maroua palace Hotel", slug: "maroua-palace-hotel", image: "https://lh3.googleusercontent.com/proxy/v7o5K4fkMuS18xHQV0OVHRw4VpxM4LMYvev6d57rj7Rsn8BZobGIp6EpqJXB8no60UasYRlz9IMI5FalxucNaTzEHNyTacy6sPlMzzg522EMtSp8rdqCJ714lJph3V5zLD7dxBqsmLOiDU553qx4PoiFL8V8HA=w252-h168-k-no", gallery: [" https://lh3.googleusercontent.com/proxy/1Z0Dilpf5EYD9YkUscxfFZabhUQs5KQAl1hV0s7fGfi9-9qiaQl7PjQeH2osNcyu-ryuntP3VUvESd_lofqlSg3YaPGDoWA5rrBx3Vni09gwtrMQFT4Eszgw3s_AhKKe804J9baXaxahdznOWi7E1mrE0DbBnPo=w252-h168-k-no","https://lh6.googleusercontent.com/proxy/_KQgkC8jdQqUm0Hf21cAYzPR7YRFEyyggrGQeLGDbXl84ae04wpugvcACY0FMn95N7djxLntW-2C8knrduo0uF0DKRaoExw6ICmX_yu3fxmk7-Ge6AifSTlRaMGKFt312Hd-7E9iCk36YmpC70Uw2AdswA2-IIQ=w252-h168-k-no"], description: "Popular stay with a pool and conference hall.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 70,000 / night", rating: "7.9", reviews: 52 },
-        { name: "Hotel Bam Company", slug: "hotel-bam-company", image: "https://lh3.googleusercontent.com/p/AF1QipMPpy2QmrHbx2TyL9s5QyeMwce00Q444R2k5Kdy=w252-h167-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipMLZg7kPYrdldKHwAmHQ0DcIYC6xg0ERLtt017F=w252-h167-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4noZQCZt4ijPBtiI4J9bXUJpbKsb8NLr6QDOGWRvj9qRur-tkVIgnPOBQmrDCQ5e3wK-_xVaICyZpOLL4vZ0ry1EzlPVEiNoCPZBvDe3tz84Y-nOalsbWAjfc5_u24OB1WL6evAmvg=w252-h243-k-no"], description: "Comfortable hotel with restaurant & terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 39 },
-        { name: "Sahel Hotel", slug: "sahel-hotel", image: "https://lh4.googleusercontent.com/proxy/LL_4maD8Hph3AY_1gLDwG8AnfpSSfWWTdRh4loVqNc0pBhQQW0yr8QuflrKylx-5hNL68899_3zyXnZCLvqL3neM6iuTNJSS3kfXvfzjCZZs1Vn90G9OUWpljHCfDugWEHGLWQ7zT_NbfOQIIMYXV127BJ6C9w=w252-h183-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq2kkugcIV-bVReDvJh2a6N8jEg7AzrWPO-IpT3a00x_unBPaMG2qzLzKSp7XAXz79QFzVVXnIy7Th-37qfqmOY_Loyr-1zpZHJli3uY1DwVibOUoOYvYnz0uQ_CYE6DCoBaAFZiA=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npYSZMH7guSLrLGD06BuYw1istRrC1cFJYQvOjz9pEX2sj5lu1NIFzcU0_bm1_JcF2wB6snoBuNYUhBsWW5Yko3yNbMuASDFLpcKA2h602LxCVC6rIkwAvBR5xMHJP-QT-ILvxBJg=w253-h449-k-no"], description: "Budget-friendly rooms near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 26 },
-        { name: "Hotel Saphir", slug: "hotel-saphir", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nq6hFroQbeVxlk6-Ebe0vDsE2NM80iR8JDdWBHpZyZbbiCfAMsrgPUTY0LGFvoBMKTQw7fjNqNnQysjZjwkjAOsTXZttJRTFGZwJi7O0YNn8TASprZ2QChtNp-iOzaXvtOLT2j5yw=w252-h252-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrFDPuX10G2jLh6bli-s_xeqH1EZQo-pXTzRWReLLocOZtzcLq__wzqR-fWU-yn8MyElrCvTpsEW-L0EkllS0_5LujKjIrEN-b3Q8hUgNWQQaH_k_R8Ucmfooaxbxz8_VkckLu9=w252-h189-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nodFa1u3ZKUWg6hccl6XvXAQBs7lpW_DmUEzBSzslEQMZ8nArUZxX-47cHA_1ewjYH9T-cI55gSb70RDwbRbhyeOcjqziVQE2jj8TD0_KMRJxa3pMeLCeRzL4zCeFj36wRbhE1A=w252-h189-k-no"], description: "Calm environment with garden & bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 30 },
-        { name: "Hirgoyo Hotel", slug: "hirgoyo-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noLiRkmb4iiJzaEnzvyaWGt2FhLd0whl7I7DAQzqlXLMUbhcnI0-Q5onSxqekAhk9lDNxazLtb5erZ7OIYcM3BbHcpIsjDy5L6MZ1heZU6iRTh3RkoMe7lnZCBK5h0DR1OvG8lxgw=w252-h168-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_-fYQXa533I0eNQ3jSqVKUNJY09jeF81e3xU47sT9Fm7Ubn-6359pLU9MjREOHAhjfvgO0sLANkZ6ANWgFrSjwkgqFKqllEb8reIOTCL1i5o5k6frii3auLRCHSpAsHCCukZ_LQ=w252-h168-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4np4EjZme5cJJ-IZOOVrx_HsBH5UkgYM5qBuY-agROf9FtbhqQU9nEfKfd0NwaRecRbd5jlPAAtYKqGPt1TSTjgr6Kc4POlCLB0sXuiLKWKj90_iFSbtCLqhMTcQx7P0QPFb8t4O=w253-h449-k-no"], description: "Family-friendly residence with terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
-      ]
-    }
-  ]
-},
-
-// 8. East Region – Bertoua
-{
-  region: "East Region",
-  cities: [
-    {
-      name: "Bertoua",
-      slug: "bertoua",
-      image: "https://discover-cameroon.com/wp-content/uploads/2015/04/Bertoua.jpg",
-      hotels: [
-        { name: "Hotel Martino", slug: "hotel-martino", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqMQUrrIkW2Yz1Bq-Fep4kttcdZAFlSudUwoCBa160vt9pJkuIX4oF_jkn1tfLvKf4Yye25k7rCpl94Cr6PWpV3IloMv27PCXOj-AntyF1LwqvHxababaRvn1nT0fOuPaL2LKBm=w253-h449-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrGmc-EX2g9UKHe6Cvy5f0yyFUmGeo59v_JTv1nvIa5CcGrcF9oCKAJB2xHqkAtuHtudQrzvefMfP1y-KS08W1UCGimaB8w9ViMtDPnz4lckujzKCJbCaZzi6wtw1w1SM9Gfqk=w253-h337-k-no "," https://lh3.googleusercontent.com/gps-cs-s/AC9h4noXL8dkmTR9cp88Ft5k7-yT1MGGt-2d1jh2YdYD5l-KP8s73qfRTbvOqTiDmtZeuK3nTvPlKrDOiXowozLo67TD3dOI5uZc1ASNKU0Nho3A0FhhsH4t1LKhJK-PeWzxZfHB5AL-=w253-h189-k-no"], description: "Central hotel with restaurant & pool.", amenities: ["Free WiFi","Breakfast included","Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 48 },
-        { name: "Hotel Mansa", slug: "hotel-mansa", image: "https://lh6.googleusercontent.com/proxy/mUIk9VvD7-Cjl_9sBda-k9Ka9yd2gJOmvDcI0u9WNXJz_UA24XzbRR1ONO-7umLgm9jeZrcFcT6bz2Icd5ucWs9XqXNKd5jWj5I8EFPaO2PcvRDEuoZgyECPuNeqZxk3v7oSYdiUl54REy0dWsOIKxsJMCpE1ok=w252-h168-k-no", gallery: [" https://lh6.googleusercontent.com/proxy/owWeSffu8jTXN1reQEY-aWM3WzXRUywxZhYUjJZCB29CxbohgsfFM16cNGU-x12jeH7t07mjYQqmY6d3vdZXa3UlE6Z_L7qM7DNsopgGEsJ99t_gLngYdNZQNpvifj6EGEg1pwPgpavcVx0DZwZEXvnkQURGIA=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4nooY6zlTyldEFljdIMVFo6iNt6iY14_ys-mPNqyVvevOqFifJLBmvRoQVD2UFiIAITJdqjyVG3_rU7qIpdzzeWqNE9QTTdf-6En3BQRdd66tZ8sUJZTe9waXfFcefJ8GNrjfS6l=w252-h189-k-no"], description: "Well-known in Bertoua for its spacious rooms.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 37 },
-        { name: "Hotel Massoh", slug: "hotel-massoh", image: "https://lh5.googleusercontent.com/proxy/VgiPuidDBHp2nX0oYV39zZUeoc8h0G52pM2FVb8Yo00nxKS0abP9JL6in0bRBEMg7VHnz4u6kiTS5mrq3NauBJnYxG0Oc3Jc3hYpydkwu5ZvhhwEf0YphlL2Rs72z1DmVqIfH6Ss87CC2Wns-0EciIIrzkFoDA=w252-h168-k-no", gallery: [" https://lh4.googleusercontent.com/proxy/O2fvE0qNUEOTh9zkJro8ZFGPQyXQrDhIL5AkDguncNdcxZNeuj_rAv3Zpjpc4B18KlYgZRui6a4kqCbU_j-EsnvfLcvbiF3W2_trPzRlVjMcCnrJFxmBFrdHAYIRFKMh_nofy1yX3qIGdotT06aGKDuMX04k4w=w252-h168-k-no"," https://lh4.googleusercontent.com/proxy/8k0ePvUcxSo7vLT8vN1yOCFQNrxigDmNwWLbpH9C3FbTM9byZ4Kgu9Qkfo7qjqMfk-osMvsxPwMUZVHXm8jPZRNncxAZrZwipielZnANrqZtg6iocH_Mbr5AqoJZryy_bimarqlsW1GV6kAhFgqffsGHz7kWKA=w252-h168-k-no"], description: "Budget-friendly hotel near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.4", reviews: 24 },
-        { name: "Hotel Montagnia", slug: "hotel-montagnia", image: "https://lh5.googleusercontent.com/proxy/AKDUu-WNVsvjCQqWoFfoOBUiQ6xtqt3NtWBtYJGLwSsaNZn4CPOiTIlwRQ5IF7-3mBgTFdBRC3UNHzsD9vlA9S-0BhRF3MJAsFw2ZNbQF0K2UjwcGYtfw8O9IznqzwIRrSdhwcDUQdkafelFo7lpr36QKK8eoQ=w252-h189-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4no42lYJZ-0-KQonO1ZyCcphXyFrsXkDs09JMvnu3DklMQxDRAGlh1vbH_z2vx4fZnFJH8EYN82c7vAitwgzwJRfdn38bmSgY7KU1NfkzrW43KjNlWUnypN9nM0dwgzSG-VlT9tn=w253-h253-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nruPQqlTHnPVy5s1KAJaIIfr1kBN7CRmqiePxo6OiuLWrPEujGeQ3g2gS_u0-xW3kQu8p-_lhnaquW-_uJ5QR2nM-AiwmPRKcjVSikcYsygj4s1gfb6z9CNb8hNVK-X_EQu11k=w253-h449-k-no"], description: "Quiet place with garden & bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 28 },
-        { name: "Hotel Pheonix", slug: "hotel-pheonix", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npaRft2erQQN-e9aeSVeKl2gXsMk2CcWHLG-yuFHTCHbOnByEj6GHdTxCJe1Nl1zVphR6EGtULTaOz_X6qv_kzd6K0aQyeNAj0ql4EFsOFdJalb4mUhTNbLdigPv8ZYJRqbon77bg=w252-h336-k-no", gallery: [" https://lh3.googleusercontent.com/gps-cs-s/AC9h4np6pixFmBmqITeFbT-_ljfpb1YGL_ryaFvzLNPJshDRFMPIMgbFZN4xDumLLurke5krkXur3dBIyrAVu71EIj9JLxZYtNsj1u4r5bQtTAn_b1ivau_oIdmzn93cCAtXKAbaMVXO=w252-h336-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4norIqbXjP9yOG9GjlxHHQ8XTNcpojuQz3OIRRuRjIbMN-gyw0Xj4Ddf4cvYTgt3-6KMPZ6FOYw2MxC6eJmGjfuHIEOTZWR6_ewMt-KzohKfG0nFTPu8Rej8Oss38moqLwLJbI5U=w252-h336-k-no"], description: "Family-friendly hotel.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 26 }
-      ]
-    }
-  ]
-},
-
-// 9. South Region – Ebolowa
-{
-  region: "South Region",
-  cities: [
-    {
-      name: "Ebolowa",
-      slug: "ebolowa",
-      image: "https://i.ytimg.com/vi/mLZkPo17Kxk/maxresdefault.jpg",
-      hotels: [
-        { name: "Hotel Ndancy", slug: "hotel-ndancy", image: "https://lh4.googleusercontent.com/proxy/iQX8nBmO9Ufwbru0nyyw_maxxxwdpQd12R1I9Fta16feJmqKvqksJDBm3HoKRgPN_maGLOfCAvDjld-BHYrbUtnB1kgqSrc7XLEPFHfV_D8f8e8sULHQajq4BvOeWCr6MNE32sF1Ccs5XdAtX2VmzdHpjt6LG6o=w252-h168-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/9ln8qA2UzbgGFR4zjltqzpiO7p5ZZPUP7pEU_PGStqemSeeQro3S9Xq6WAReDGfOJfUy8Ton_Rjt3dRqB-jgw1HfsqXYY9fo17mckprzWAN7OLb0piGcW9ao-bZz7D3WzmHWpxL8oi8Z0ulvs0ErpjnHS4GMOw=w252-h168-k-no","https://lh3.googleusercontent.com/p/AF1QipNrdUOMOWKqx1GJ3u9UMSdoz9vsizvJeM_idw2Q=w252-h189-k-no"], description: "Central hotel with restaurant & terrace.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.8", reviews: 33 },
-        { name: "Hotel Boulon", slug: "hotel-boulon", image: "https://lh3.googleusercontent.com/p/AF1QipOWO8hq_LCHo8b7fhqWMBrqrapQqUfncwRPgWNv=w252-h189-k-no", gallery: ["https://lh4.googleusercontent.com/proxy/yPQfdgYFRjy_8CRXu0-8D7vINf3rkvpjIWR6ysjdpOEGAZQ5BztR18m-dCAuQwXevsrhiY1DVO9X69bdM3u7Ty5E0VIOX0jdJwq6AO225wns_Yjq9F8xTPBQYUCMqDPKwWx5maGIn2mkbG8kwd9jYCsuGerLV3o=w252-h168-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrx_X5V7sv7-KVk4-sbRKTTLl6fM9Q2y4A82_yPpyyw1QKFcyg2xL_IOssxPF6pX-OYGSTiYLD-hu9GS7KVmWWLKxrjdJkQbq6gwDEmpJ8IHhchApAKhfu1pZtNmcAQYJDSKKjAKQ=w252-h168-k-no"], description: "Spacious rooms with free WiFi.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 25 },
-        { name: "Hotel Bengo", slug: "hotel-bengo", image: "https://lh6.googleusercontent.com/proxy/sg0Yu2XP40hONbmgdM03_IqyohqUctCQMwh4B-MkmrF0QeN5WjkZOzfX5vksrRI_HQCn9E89jeP24-c227LjOeIkDhUto2uD6MO1DbV8lBU77mWI76mhGSacyFc0JKKg_uEQgaJIoE9O3hfc6Kdaw5XFtR-giZA=w253-h142-k-no", gallery: ["https://lh6.googleusercontent.com/proxy/iR03FF8aSjv5ToXGrWe4V_JqZI1YIiHWnZJRHlgefbcp3Q3ctsJZ9QqARyMxMdeLfbqs2n2mzwwNPg8CPEN8jM4gXp-kYL8Vg5xJWOAk0RFPDc9flBR9_biekSpsi12of9NHLKKdHS0xXIph7_nFKypaUc1nYqU=w253-h142-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4notH9zOMf2QjRBQZIV0_dzl9OtMjbrtrvwIPi_j0ddrozYiNBvb7sDkCkFWU0tiVKfeEur67V5ne5xvKpWoRI5wBOy6ZW1PnINyIl1RsQL2WNLv8twRY3m_JPa7CZBW9zSf2XY=w253-h142-k-no"], description: "Comfortable stay with bar.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 24 },
-        { name: "Kapso Hotel", slug: "kapso-hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrLQjdMy6pUbu4M2cHpaBQKJS7azBtOVB6kdq-cAisftPsHh2MTVczBqZPCB99iS4S6faPAAh8Aj-qM1XueP_mMgJBRLARXSF6S3liylyJbQJc1CglE8dCC8xCbytSOa6YMbRzZFg=w253-h113-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrbQdPuza4p4lhebOHV072qIYRDT8ORp2BIr1qmgRy5BlLMeXOEfCfT9HANdEbAcC1EyPGKPiSFiNzrCjd-ZYZKVIGqJDkZrE8NSlqmf6-2qoCC1W5z7_lhkiudWUCBh6TMvhDM=w252-h448-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqJvu4wXeIhYMRtBVs-9KOZp3aLspZMhtS23pJfj_5URP65mRX0XTRbW_UOVJyksE1i05U6_z-wssmcKyPfMCK80XwsvrF6tCaFADLPqmrUI0GUeEQXrBoxT0eHG5jB_abTB7kS=w253-h142-k-no"], description: "Modern hotel with parking & garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.6", reviews: 26 },
-        { name: "Hotel Pluminite", slug: "hotel-pluminite", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noIdOircQikvRSAaHc5ubakb44hfydcKtWT8Ev-GJqJ_rHU_4II6SP_6cxcsHBj3to05Z0Ffg0k07mu7pj0_ff0Lq8TQD-ZSIPh99v8n8zCWfttg4voWucSN1lv4YiGy6yTLoU=w253-h337-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4no8m_InJ76Vp8w5NeC3uqihPb1a_fvR4hHfrp_pKijxPx5pSNGQROOg9_GG7G_HRoMv-3oqhDDi0Owpw79eevCBnyBeVqT2bZcVM6iXQOQ5kCudaAbJgFLwHC_C8PjDR6-qN7krpePGybfC=w253-h190-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npJElHuXZe5bC59Ai4_K3YHyyrahIo0GIGlLFMjLbgFJ2UMzQa_g_71RwGexubJIoH0AsbhbDciQvwLNXdk3LSihGhX_fgF9UJzSlqw2dfLCHxz6iXEGHModuN1L-pjagoiKMSxIcUqqEA5=w252-h218-k-no"], description: "Budget-friendly rooms.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 20 }
-      ]
-    }
-  ]
-},
-
-// 10. Adamawa Region – Ngaoundéré
-{
-  region: "Adamawa Region",
-  cities: [
-    {
-      name: "Ngaoundéré",
-      slug: "ngaoundere",
-      image: "https://www.shutterstock.com/shutterstock/photos/2456142031/display_1500/stock-photo-aerial-of-lake-tison-ngaoundere-adamawa-region-northern-cameroon-africa-2456142031.jpg",
-      hotels: [
-        { name: "Hotel Plus Sarl", slug: "hotel-plus-sarl", image: "https://lh3.googleusercontent.com/proxy/2uXBaxUdyQ_1T_dwyzKVmYDZq9ZdqR9YHS0XWonWKiSU5Wj9587D_PK3xC7VXE4R98O97J--cmPROkno0KZSUriVA1STzkR-HDSxMoFfh-Lx9PDdfY6l14PkTqAQO7TxRDQrfPT1PWIUfoP_seeFYSOyRw3lSj4=w252-h168-k-no", gallery: [" https://lh4.googleusercontent.com/proxy/XS5mc2WIuhdhMQE4cmdeqCoPwKmFDdjxeTud8rLpnyeCItTgX-b0eXSReQx63I2tghJ7j2la_v84Akwa0FNzKMOqeeioBhTd3OKvVlnX99URkUBAUUiTSzXjowKP0sIp3XynKxI09OWxzpSu59x-lZpBOXAW1g=w252-h168-k-no"," https://lh3.googleusercontent.com/gps-cs-s/AC9h4npj_FFwvsyd0UQEzdHg7A6TyqbdmfQSowrg0_UdXfAcF5ahQU4y75sHhY9SKaUd1DpZ-jchwONA-bPBcowKyN9z3-Itgt_sOHaH8HkRk-WZ7ndVmIJd-6h4MDrzfn71aSksSAjS=w253-h562-k-no"], description: "Central hotel with conference facilities.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 65,000 / night", rating: "7.8", reviews: 34 },
-        { name: "ZEN Hotel", slug: "zen-hotel", image: "https://lh3.googleusercontent.com/p/AF1QipMMan5SVkZCNaYg1guFQIyjFGFDO_nP312Osb4=w252-h166-k-no", gallery: ["https://lh3.googleusercontent.com/p/AF1QipODlXy_KmpNm3hIIIWnb3HO3jAspdQzyj3yNHE=w252-h167-k-no","https://lh3.googleusercontent.com/p/AF1QipM-UFMoBAZv94y9lhoMmt3owTAtWchndaQyyjc=w252-h167-k-no"], description: "Family-friendly residence.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 25 },
-        { name: "Hotel Vina Palace", slug: "hotel-vina-palace", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqthEzfWkzTfMhbJMT-EsVKU-bai9IcfDBadQbxjAIiT6cTVX4y5W5ig_EsB2fB_RGdf36P7ek-b0LLpczTs5_Y--7Of0PzrvqesTCNhvKQolIMGHRmkNy1OPs7j3ufvK__SDlu=w252-h336-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqMgSeE1bnW-y78l5zSdw1_K-_mCYfuUEoOkzXCmOKdlz-wYp4NAIZ5HRlVRMIOjU3738h7tkw_bd83ct1zT33G42pvAu0c0mBohyU-NtrI36Z1YViaI5L7B8BTBiZd1dkT4C0h=w253-h142-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4npkuOmV2sk1L2ejz07c4G9y_MJFxJjDRAKcJ9UuDjo-GIeyryz_eim8JHukZsnqMweEDYUxTLw40aqpuJ_bIxqQZmu07zs7dM1a_d-E4LX3Uoskr75uvuwM6q7ddXtvRyMR5VMF=w253-h337-k-no"], description: "Budget-friendly hotel near train station.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 22 },
-        { name: "Transcam Hotel", slug: "transcam hotel", image: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no4z2VV4w9bHXeSvMQd5GL10eFPdBktVn_u5LcNuZmkWCg_xCjygvA3NS0DXyO_5hEI1wB3UoMVOdl9oiFWDmSiWQpwhc9WOYxjCfKCO4Q6sCVtUmFdcumstl-TIBfUmOgxLko=w253-h189-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrFUtVTbfkwpSObsALAVf5yKUARJXkAVzWuDPqF9s2IHKCy9cvQBsFq6WEKe_Bp12PjeAqL23NV6Yj_hbCPeh-yvWWpH49ROpxkJePk4n-kZR3Trwddpy_320r5Ck1XuWPjNw73=w253-h189-k-no","https://lh6.googleusercontent.com/proxy/Mab16cKGYxfyGgtBpW32WCqfixGYdMOfjejK4oBDb8NNpX76i0jO8A1090P2VrZTI7nUo5TlCGwVjDNhPg5miQ0p-cJ8FygitEM_HB2Q_Uuxia0K_oEgsjLExuGz6PlAViQeBnTgVxf4JwJ2SzdGQc73rJlRcw=w252-h168-k-no"], description: "Calm environment with garden.", amenities: ["Free WiFi","Breakfast included"], price: "XAF 58,000 / night", rating: "7.6", reviews: 26 },
-        { name: "Hotel Mentong", slug: "hotel-mentong", image: "https://lh3.googleusercontent.com/p/AF1QipP2gakiE_qNiuuvxDBjFI8FbKpKbkU83hN--aY=w252-h167-k-no", gallery: ["https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrGhL5tkbaLCw9yk-RwAAgHzi4xd8mG_slja06aoFtfYJ_CXSleE0r_tVqS-vzgHTSOVCW3ZXaoQQux0pO6NueHcRu3eo5X0g_356EqFGGVLGMJ34dTFVdWvBPcACe_JYBJTNdl=w252-h167-k-no","https://lh3.googleusercontent.com/gps-cs-s/AC9h4np0disCWeTcJWc-ho22TDNkjOaqNsLYoafmwNf3jDj8gMJCJ3HTDk4RRyDDvZXOka7LahB6pw41ePf6mhWGuwOzg-I6JESvBq5ti-zsKNwhtQI9amo3E2p0g8yaOSgeq2XJCTyl=w252-h167-k-no"], description: "Affordable stay in the city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 20 }
-      ]
-    }
-  ]
-}
-];
+  {
+    region: "Centre Region",
+    cities: [
+      {
+        name: "Yaoundé",
+        slug: "yaounde",
+        image: "https://media.gettyimages.com/id/sb10066698pr-001/fr/photo/presidents-palace-yaounde-cameroon.jpg?s=2048x2048&w=gi&k=20&c=w0qaWEYsTU41C3ZyTA_q-pdDViXT0Z19qMvPCcZlKok=",
+        hotels: [
+          { name: "Hilton Yaoundé", slug: "hilton-yaounde", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/cc/85/e4/pool-exterior.jpg?w=600&h=-1&s=1", gallery: [<img src="https://x.cdrst.com/foto/hotel-sf/1208c602/granderesp/foto-hotel-1208bb58.jpg" alt="Bedroom" width={600} height={600} />, <img src=" https://media-cdn.tripadvisor.com/media/photo-s/02/cc/85/e4/pool-exterior.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://www.hilton.com/im/en/YAOHITW/3325043/la-cascade.jpg?impolicy=crop&cw=5000&ch=2799&gravity=NorthWest&xposition=0&yposition=267&rw=768&rh=430" alt="Reception" width={600} height={600} />, <img src="https://static.readytotrip.com/upload/information_system_24/2/3/0/item_230785/photo_95017668.jpg " alt="Bathroom" width={600} height={600} />], description: "Upscale hotel with pool, gym, tennis court and central location.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Fitness center", "Conference rooms"], price: "XAF 220,000 / night", rating: "9.0", reviews: 250 },
+          { name: "Djeuga Palace", slug: "djeuga-palace", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ec/44/c4/entrance.jpg?w=1000&h=-1&s=1", gallery: [<img src="https://images.trvl-media.com/lodging/2000000/1700000/1690600/1690559/8349d1d9.jpg?impolicy=fcrop&w=1200&h=800&quality=medium" alt="Bedroom" width={600} height={600} />, <img src="https://www.petitfute.com/medias/professionnel/161065/premium/originale/66101afe82496.png" alt="Poolside" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000352/Cameroun_hotel_Yaounde_DJEUGA_PALACE_photo06.webp" alt="Reception" width={600} height={600} />, <img src=" https://s1.hocdn.com/cache/exp/max800xmax194/lodging/2000000/1700000/1690600/1690559/0225782e_b.jpg" alt="Bathroom" width={600} height={600} />], description: "Elegant hotel with swimming pool, restaurants and nightlife nearby.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Bar", "Business center"], price: "XAF 150,000 / night", rating: "8.7", reviews: 180 },
+          { name: "Hotel Marina", slug: "hotel-marina", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/b7/ca/14/caption.jpg?w=1000&h=-1&s=1", gallery: [<img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/289882914.jpg?k=cf7942272ac415c846a6f3e636740e500fbb25e6a712772a47a4aedb0ca101b2&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://hotel-merina.com/storage/galeries/September2022/52EwxUy1xboFaqyCEckP.jpg" alt="Poolside" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/290076295.jpg?k=f80de3c8b42466a8f8ba8631223301dd3568834adfea395000a110e2c9f1c16f&o=&hp=1" alt="Reception" width={600} height={600} />, <img src="https://images.pexels.com/photos/3579899/pexels-photo-3579899.jpeg" alt="Bathroom" width={600} height={300} />], description: "Modern rooms with city views, pool and fitness center.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Fitness center"], price: "XAF 120,000 / night", rating: "8.4", reviews: 140 },
+          { name: "Star Land Hotel", slug: "star-land-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/22/00/38/caption.jpg?w=1000&h=-1&s=1", gallery: [<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/339864241.jpg?k=3174dd51da89e6c4e43a39b4b641db2ccafbdceee4a03c1fe0359d1f2b76d448&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg7Z5Xz4Q1NZ3OmrrZq9qeHHiePsLnooafgg&s" alt="Poolside" width={600} height={600} />, <img src="https://media-cdn.holidaycheck.com/image/fetch/w_768,h_432,c_fill,q_auto,f_auto/https%3A%2F%2Fi.travelapi.com%2Flodging%2F16000000%2F15570000%2F15568500%2F15568425%2F80f555c4.jpg" alt="Reception" width={600} height={600} />, <img src="https://x.cdrst.com/foto/hotel-sf/d9943eb/granderesp/foto-hotel-d993941.jpg" alt="Bathroom" width={600} height={600} />], description: "Comfortable serviced apartments ideal for long stays.", amenities: ["Free WiFi", "Breakfast included", "Kitchenettes"], price: "XAF 90,000 / night", rating: "8.0", reviews: 95 },
+          { name: "La Perle Hotel", slug: "le-perle-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/f6/b2/cb/caption.jpg?w=1000&h=-1&s=1", gallery: [<img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/574342429.jpg?k=fc9b0d4cf8aba8baec4a14e575eebffaf1bc9cea59f3cd7341832bf0d6e58761&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/574325630.jpg?k=84fb0255eff67b12f7c96c7e73995420def1829fb1586bc21dc861deb7b6bd2f&o=" alt="Poolside" width={600} height={600} />, <img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/65dcafd82cc27_1708961752_d%C3%A9putt%C3%A9.jpg" alt="Reception" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/574361560.jpg?k=b54198dcc5b4b8a7ad405f7f96473abfb47ed5350edd840ef0adf396214d4553&o=&hp=1" alt="Bathroom" width={600} height={600} />], description: "Well-rated hotel with bar, restaurant and city access.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Bar"], price: "XAF 100,000 / night", rating: "8.2", reviews: 110 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "Northwest Region",
+    cities: [
+      {
+        name: "Bamenda",
+        slug: "bamenda",
+        image: "https://t4.ftcdn.net/jpg/07/09/51/09/360_F_709510932_0xdJMNijjTOZQw7FfWQnN9Cl6utwPDW0.jpg",
+        hotels: [
+          { name: "AZAM Hotel", slug: "azam-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/9b/f8/8a/azam-hotel.jpg?w=900&h=500&s=1", gallery: [<img src="https://images.trvl-media.com/lodging/8000000/7770000/7767300/7767220/08799f3d.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/8000000/7850000/7848000/7847954/7611155b.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Poolside" width={600} height={600} />, <img src="https://cdn.hotelsmotor.com/262/26157/Azam_Hotel-Bamenda-Cameroon17_large.webp" alt="Reception" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/8000000/7840000/7840000/7839928/6aa3d14c.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={400} height={300} />], description: "Well-known hotel in the heart of Bamenda.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 90,000 / night", rating: "8.0", reviews: 88 },
+          { name: "MAWA Hotel", slug: "mawa-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9b/d4/mawa-hotel-bamenda.jpg?w=1000&h=-1&s=1", gallery: [<img src="https://www.letsbookhotel.com/img/max300/528/52840951.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/668fff2c1fca4_1720713004_2019-05-16.jpg" alt="Poolside" width={600} height={600} />, <img src="https://camhebergement.com/img/maw%206.jpeg" alt="Reception" width={600} height={600} />, <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/4a/9c/c0/mawa-hotel-bamenda.jpg?w=1200&h=1200&s=1" alt="Bathroom" width={600} height={600} />], description: "Modern hotel with city views.", amenities: ["Free WiFi", "Breakfast included", "Restaurant"], price: "XAF 78,000 / night", rating: "7.8", reviews: 65 },
+          { name: "Top Star Hotel", slug: "top-star-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-s/02/a5/e3/79/getlstd-property-photo.jpg?w=600&h=-1&s=1", gallery: [<img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/9125/media/66d0ab745ceac_1724951412_top-star-hotel.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://ik.imagekit.io/tvlk/image/imageResource/2024/06/21/1718957715688-26316a3442d27400e8a6919f75237573.jpeg?tr=q-75" alt="Poolside" width={600} height={600} />, <img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/9125/media/66d0ab7330c53_1724951411_top-star-hotel%20(1).jpg" alt="Reception" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/339864117.jpg?k=25012196887cdebd82c492767a3912487f399824a2b8d72de790e2bb9f833fc1&o=&hp=1" alt="Bathroom" width={400} height={300} />], description: "Budget-friendly hotel with conference hall.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.5", reviews: 40 },
+          { name: "Ayaba Hotel", slug: "ayaba-hotel", image: " https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/66c8a25aa1af0_1724424794_3a68ea4f21f97c160b5b93778261c9e96db028393920c6487cde841be48e.jpeg", gallery: [<img src=" https://images.trvl-media.com/lodging/8000000/7850000/7848000/7847954/1bf45a64.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src=" https://camhebergement.com/img/AYAB1.jpeg" alt="Poolside" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/8000000/7850000/7848000/7847954/0c789dd0.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/8000000/7850000/7848000/7847954/819061b7.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={400} height={300} />], description: "Comfortable stay with restaurant & lounge.", amenities: ["Free WiFi", "Breakfast included", "Bar"], price: "XAF 60,000 / night", rating: "7.6", reviews: 55 },
+          { name: "BLue Pearl Hotel", slug: "blue-pearl-hotel", image: " https://blogger.googleusercontent.com/img/a/AVvXsEhLXqlwvpcWwYiW-bu1RLXbYTemXDa3ekr1In3pHqWPyEpOASs2F3OUKfudrpshVfN3ZGITK9EotgNLF7mfmKGiyc6qrcM5BRmwIIePiCbvk3I7F6rEY3uyM_y3azf2Rex9Q-vekOfrsj7UhMgvv5ZryIvxXCS4yWEHfM9trTBFjfIN7RfaAOBSGfHbYr6d=w1200-h675-p-k-no-nu", gallery: [<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/32/70/45/blue-pearl-hotel.jpg?w=700&h=400&s=1" alt="Bedroom" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/697965164.jpg?k=1bf52bf74058ba518747d16d69da095643e95d1fa75e903b50a9cb38e79d01b2&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src="https://mindtrip.ai/restaurants/4972/1b0b/8414/c336/688b/f920/7998/6e0e" alt="Reception" width={400} height={300} />, <img src="https://maligah.com/fileCatalogue?filename=2018/02/photo5-9.jpg" alt="Bathroom" width={400} height={300} />], description: "Boutique hotel with clean and quiet rooms.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 65,000 / night", rating: "7.9", reviews: 43 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "Southwest Region",
+    cities: [
+      {
+        name: "Buea",
+        slug: "buea",
+        image: "https://mountainhotelcameroon.com/wp-content/uploads/2017/11/h3_tint.jpg",
+        hotels: [
+          { name: "Hotel L'empire Blue", slug: "hotel-l'empire-blue", image: " https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/73/0c/46/the-hotel-building.jpg?w=1100&h=1100&s=1", gallery: [<img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/12464/media/673dd0b4c97e7_1732104372_Hotel%20L'empire%20(6).jpg" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-cLOlUFkh3uDWVJSJYv0ngRCfTwhb0N2gMg&s" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS14U5UfA5hOx8BMuniSqR8LumaFWQvfJ--zA&s" alt="Reception" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/99000000/98520000/98514900/98514834/5c4b021d.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Famous for its mountain view and gardens.", amenities: ["Free WiFi", "Breakfast included", "Pool", "Restaurant"], price: "XAF 95,000 / night", rating: "8.2", reviews: 102 },
+          { name: "Hotel Pinorich", slug: "hotel-pinorich", image: " https://q-xx.bstatic.com/xdata/images/hotel/max500/679145916.jpg?k=f085fcb9334e0c826f8a0fa441a649da91349649eecf6baa285d96d584bc64c9&o=", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKNe6Lj5kGZj9GZMfEEihOR_QXLbEH_L37eg&s" alt="Bedroom" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/113000000/112080000/112076700/112076615/c421c165.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Poolside" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/113000000/112080000/112076700/112076615/8d090d3c.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/679335286.jpg?k=85a14b06e32b2cd47498dc12c9fd363f3f27d9d89bce706e578278a2a76499c7&o=" alt="Bathroom" width={600} height={600} />], description: "Long-stay apartments with hotel services.", amenities: ["Free WiFi", "Breakfast included", "Kitchenette"], price: "XAF 80,000 / night", rating: "8.0", reviews: 67 },
+          { name: "Hotel Saint Claire", slug: "hotel-saint-claire", image: " https://yomboa.com/wp-content/uploads/2024/01/2021-09-20.jpg", gallery: [<img src="https://yomboa.com/wp-content/uploads/2024/01/6556994a.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFBZIu1qv3GlIj8BAnTr-OT8BxhrjOCYBiUA&s" alt="Poolside" width={600} height={600} />, <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/17/01/2a/the-terrace-restaurant.jpg?w=300&h=200&s=1" alt="Reception" width={600} height={600} />, <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/51/4d/9f/chariot-hotel-buea.jpg?w=1200&h=-1&s=1" alt="Bathroom" width={600} height={600} />], description: "Centrally located with conference halls.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 50 },
+          { name: "Capitol Hotel Residence", slug: "capitol-hotel-residence", image: " https://media-cdn.tripadvisor.com/media/photo-s/00/1d/d7/49/african-queen-lodge.jpg", gallery: [<img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/4387/media/66d5de5ce7e2a_1725292124_387753759_1059517615030150_5762693924499642575_n.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/66e16b6170f28_1726049121_511155665.jpg" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6CyNzVBPfLAF2QaYRjH2lTNTgS-FiKMVi2w&s" alt="Reception" width={600} height={600} />, <img src="https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/4387/media/66d5de57ab3e8_1725292119_Capitol-Hotel-Residence-Buea-Reception%20(1).JPG" alt="Bathroom" width={600} height={600} />], description: "Affordable rooms with restaurant.", amenities: ["Free WiFi", "Breakfast included", "Bar"], price: "XAF 50,000 / night", rating: "7.6", reviews: 38 },
+          { name: "Mountain Hotel", slug: "mountain-hotel", image: " https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/36/e3/9c/mountain-hotel-buea-cameroun.jpg?w=900&h=500&s=1", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE5fwFK6dbfs1c-YUZ-lnNENkqeNcWQkfrGA&s" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRas-pSU_dD01Fdt3E1nhx1uokZponIFGyLdA&s" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aY4AErsBlgjitgRmG-R4tDkvVh_Ar3ps6A&s" alt="Reception" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGEsGvmhrHNK2nGSzAOA1ERQ-Q7-cfY8HFXw&s" alt="Bathroom" width={600} height={600} />], description: "Boutique hotel with cozy rooms.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.9", reviews: 42 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "West Region",
+    cities: [
+      {
+        name: "Bafoussam",
+        slug: "bafoussam",
+        image: "https://www.shutterstock.com/shutterstock/photos/2308753449/display_1500/stock-photo-bafoussam-west-cameroon-february-youth-parade-at-the-youth-festival-in-bafoussam-2308753449.jpg",
+        hotels: [
+          { name: "Hotel Zingana", slug: "hotel-zingana", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/39/52/31/hotel-zingana.jpg?w=1000&h=-1&s=1", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfVKNPE4qjHdWyRJz_QvDnTEJcG0oT3ec44Q&s" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvP_ILhczLopfB9AJl7yWramxEF94hfNLxWQ&s" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8pT53D80mkeVYYChMFh0kwKlDbHMJFnnkLQ&s" alt="Reception" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdkQvQ1Gv-Bcx74Htg5yik5SXGJqLVEgQRXw&s" alt="Bathroom" width={600} height={600} />], description: "Upscale hotel with modern decor.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 95,000 / night", rating: "8.1", reviews: 70 },
+          { name: "Hotel Altitel", slug: "hotel-altitel", image: " https://res.cloudinary.com/doyf6tnc2/image/upload/t_hotel_medium,f_auto/hotel/DSC_0862_alreod.jpg", gallery: [<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/132277699.jpg?k=7627138b9e6804ab34935ebfe88c63531390338254d1dfb1e1e06765c5861ce9&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://c.otcdn.com/imglib/hotelfotos/8/509/hotel-altitel-bafoussam-20240201093649515700.jpg" alt="Poolside" width={600} height={600} />, <img src="https://images.trvl-media.com/lodging/18000000/17520000/17516200/17516110/4f48f54e.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbU0VTr-pTxyk1rxEOEn7h55-sElLmj4i-NQ&s" alt="Bathroom" width={600} height={600} />], description: "Charming hotel with mountain views.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 60,000 / night", rating: "7.8", reviews: 45 },
+          { name: "Cergy Pontiose Hotel", slug: "cergy-pontiose-hotel", image: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGy9z1WkN3oZWhgI3QsYd2WckQ0PATy17agg&s", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD8EFaEtPgeP1M2YmchV8B309WuxOqHgUv0g&s" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR5eP8g8jUhVkn2bRa2Npc4fCnn121Tdf70A&s" alt="Poolside" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/611461568.jpg?k=44ae1010f262d8b74030d56d7d864bd3be9a545b2fe108ef77cd63e5dd80b919&o=&hp=1" alt="Reception" width={600} height={600} />, <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/338266409.jpg?k=d08cdf1bb2d187bffbf3f6842ce27fe208c2a649eee1fe9df340f08db8fbdf22&o=" alt="Bathroom" width={600} height={600} />], description: "Central location with restaurant.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 40 },
+          { name: "Hotel Talotel", slug: "hotel-talotel", image: " https://res.cloudinary.com/doyf6tnc2/image/upload/t_hotel_medium,f_auto/hotel/15998039_a8i8oha.jpg", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb83hX8zB7Qak5RaXdG592ILgMkol5Vwl_wQ&s" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRaI0LbFqgNfFYgBFyROSYL8wWc5kAl78hwQ&s" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROQkLjR4P2HJeCc-17UYgiacMZp1aUt7e60g&s" alt="Reception" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1LymDQI-2IM3qm7X3kqhIb333bbBWUWcERIif6i450GZ-mmLswQEZZPFXHzMkLpFgUc&usqp=CAU" alt="Bathroom" width={600} height={600} />], description: "Boutique stay with garden.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 58,000 / night", rating: "7.9", reviews: 42 },
+          { name: "Mako Palace", slug: "mako-palace", image: "https://res.cloudinary.com/doyf6tnc2/image/upload/t_hotel_medium,f_auto/hotel/DSC_0007_t4hcuwa.jpg ", gallery: [<img src=" https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/8614/media/66c32f578d002_1724067671_539929102.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLJ_18j0VU9HI26rQfKQgP53Oyk77w2pNbw&s" alt="Poolside" width={600} height={600} />, <img src=" https://yomboa.com/wp-content/uploads/2024/03/277666671_2502144539928528_1737320179748808422_n.jpg" alt="Reception" width={600} height={600} />, <img src="https://static.readytotrip.com/upload/information_system_24/1/1/6/item_1168962/information_items_property_9696380.jpg" alt="Bathroom" width={600} height={600} />], description: "Family-friendly hotel.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 52,000 / night", rating: "7.7", reviews: 33 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "North Region",
+    cities: [
+      {
+        name: "Garoua",
+        slug: "garoua",
+        image: "https://irawotalents.com/wp-content/uploads/2018/02/ID4.png",
+        hotels: [
+          { name: "New town palace hotel", slug: "new-town-palace-hotel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJoGu2AHQqTNEkTGVSQBxRvXAi2iPLWNJI1A&s", gallery: [<img src="https://s1.hocdn.com/cache/exp/max800xmax194/lodging/83000000/82640000/82638900/82638841/1eab14ae_b.jpg" alt="Bedroom" width={600} height={600} />, <img src="https://media.timbu.com/img/h1413347/400/280/b1/new-town-palace-hotel-1413347-3.jpg" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtPeP6QmHGgL4Z2B0eao8xrS61xM4B-mNjw&s" alt="Reception" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtPeP6QmHGgL4Z2B0eao8xrS61xM4B-mNjw&s" alt="Bathroom" width={600} height={600} />], description: "Classic hotel by the river.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 55 },
+          { name: "Hotel Rebadou ", slug: "hotel-rebadou", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNwfxIPVTzcdmFaP_8LT1t8jUProk6zcgkuA&s", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkCT7gPp964e-OCCmE-ldkDTApG-SU0RdUyg&s" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_d8ojkxYrjEWe8pq7EMptZAZO7CLwfFw2BQ&s" alt="Poolside" width={600} height={300} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTk3yCO1EHbjQmoPfLUIGYs4QkGxvrvNo0RQ&s" alt="Reception" width={600} height={600} />, <img src=" https://maligah.com/files?filename=1649426134449H%C3%B4tel%20Ribadou4.jpg" alt="Bathroom" width={600} height={600} />], description: "Comfortable hotel with restaurant.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 60,000 / night", rating: "7.6", reviews: 38 },
+          { name: "Hotel La Benoue", slug: "hotel-la-benoue", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_kmC7Oa5wIcX7vIYjoLVsDUii2u0j8TpSA&s", gallery: [<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/601472533.jpg?k=0988590462b6335c5eaa5c5357573d43b07a319bb24485cc2782b3ed76711a02&o=&hp=1" alt="Bedroom" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/601472510.jpg?k=49921dd7a2ffcbe83759f74f43d1584b360eb0eed813b57c9dec2c9068c5a7a3&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2dURGBvuKBJl4smfOyAL7i5PZZGW8BuM9w&s" alt="Reception" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/601472271.jpg?k=323d49f09bfc92dffc85b9f4dfad391014143c97aafdfa22b9e5a44ed03ad541&o=&hp=1" alt="Bathroom" width={600} height={600} />], description: "Budget hotel in central Garoua.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 25 },
+          { name: "Shalom City Hotel", slug: "shalom-city-hotel", image: "https://y.cdrst.com/foto/hotel-sf/fff1e57/granderesp/foto-hotel-fff13ad.jpg", gallery: [<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnhfNoMH7Huknfq4ceeFLfH0JsulMDWrf2Bg&s" alt="Bedroom" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/78000000/77990000/77981800/77981704/14204145.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Poolside" width={600} height={600} />, <img src=" https://y.cdrst.com/foto/hotel-sf/fff1e54/granderesp/foto-hotel-fff13aa.jpg" alt="Reception" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97wnaUo-jCDwX96anuBPJyXQdmDIXEqjU0Q&s" alt="Bathroom" width={600} height={600} />], description: "Boutique stay with garden.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.7", reviews: 30 },
+          { name: "Christella Hotel", slug: "christella-hotel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDuAYxQTjYZFNac_QruU7r0_J6lUD2R_UZge4dZCAcH-fQdhqHWTKqF-7sHf6aGyBVMss&usqp=CAU", gallery: [<img src="" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu6kcWpR_bdNG7A1VYqphSRSFVvBEJrSwbF9LMbAJiPLPpICUMIdoguhTgQDCqW4USN7w&usqp=CAU" alt="Poolside" width={600} height={600} />, <img src=" https://static.readytotrip.com/upload/information_system_24/3/8/1/item_3816225/photo_87573956.jpg" alt="Reception" width={600} height={600} />, <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/684478374.jpg?k=54193b87429db6cbae7380da6e607494279069758a14c16ee44ed148bf431232&o=&hp=1 " alt="Bathroom" width={600} height={600} />], description: "Family-friendly residence.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "Far North Region",
+    cities: [
+      {
+        name: "Maroua",
+        slug: "maroua",
+        image: "https://i.ytimg.com/vi/tTFBy2Vyonw/maxresdefault.jpg",
+        hotels: [
+          { name: "Maroua palace Hotel", slug: "maroua-palace-hotel", image: " https://cdn.worldota.net/t/640x400/content/85/c1/85c110ac0af3a7bd5f72cba13220622af2ba6a12.jpeg", gallery: [<img src=" https://images.trvl-media.com/lodging/33000000/32860000/32856100/32856087/f5d9f0db.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb3JwgzxkvV_RQQU5o_MzGRoQlqlokEm4T0w&s" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgwCS0taW5sQpukNSeglKedknwftDrkd4juA&s" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32860000/32856100/32856087/ba6e0141.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Popular stay with a pool and conference hall.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 70,000 / night", rating: "7.9", reviews: 52 },
+          { name: "Hotel Bam Company", slug: "hotel-bam-company", image: "https://images.trvl-media.com/lodging/46000000/45700000/45696600/45696564/1d3ec464.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill", gallery: [<img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa7oyOBIEzs3dclgrft-bZi-_h261w2RSPgA&s" alt="Bedroom" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32860000/32856100/32856087/6ef782c0.jpg?impolicy=fcrop&w=469&h=201&p=1&q=medium" alt="Poolside" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/46000000/45700000/45696600/45696564/1ae4b26b.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src=" https://cdn.hotelsmotor.com/262/26165/Fondation_Bam_Company_Islamique_Hotel-Maroua-Cameroon14_large.webp" alt="Bathroom" width={600} height={600} />], description: "Comfortable hotel with restaurant & terrace.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 39 },
+          { name: "Sahel Hotel", slug: "sahel-hotel", image: " https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/e8/30/39/hotel-le-sahel.jpg?w=1200&h=1200&s=1", gallery: [<img src="https://images.trvl-media.com/lodging/33000000/32860000/32856600/32856519/f6c98794.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000091/Cameroun_hotel_Maroua_LE_SAHEL_photo04.webp" alt="Poolside" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32860000/32856600/32856519/ace82b6f.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000091/Cameroun_hotel_Maroua_LE_SAHEL_photo03.webp" alt="Bathroom" width={600} height={600} />], description: "Budget-friendly rooms near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.3", reviews: 26 },
+          { name: "Hotel Saphir", slug: "hotel-saphir", image: "https://cdn.hotelsmotor.com/262/26164/Hotel_Saphir-Maroua-Cameroon01_large.webp", gallery: [<img src=" https://camhebergement.com/img/5813441422852saph30-modified.jpeg" alt="Bedroom" width={600} height={600} />, <img src=" https://baab.ci/wp-content/uploads/2021/04/Hotel-Saphir-3.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://a.otcdn.com/imglib/hotelfotos/8/1392/hotel-saphir-htel-kinshasa-20210806020632.jpg" alt="Reception" width={600} height={600} />, <img src=" https://q-xx.bstatic.com/xdata/images/hotel/max500/423382589.jpg?k=367b7fbad09a138b4b34ee84d9faba8c636c84eb11a4aa663f60be0e17f27fcf&o=" alt="Bathroom" width={600} height={600} />], description: "Calm environment with garden & bar.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 30 },
+          { name: "Hirgoyo Hotel", slug: "hirgoyo-hotel", image: "https://camhebergement.com/img/hir3-modified.jpeg", gallery: [<img src=" https://camhebergement.com/img/7065587492894hir39-modified.jpeg" alt="Bedroom" width={600} height={600} />, <img src=" https://imgservice.meilleureslocations.fr/500x245/hotel-mizao-cm-maroua-ep-32854313-0.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://cdn.hotelsmotor.com/517/51603/Hotel_Hirgoyo-Maroua-Cameroon02_large.webp" alt="Reception" width={600} height={600} />, <img src=" https://imgservice.meilleureslocations.fr/500x245/hotel-hirgoyo-cm-maroua-bc-6087317-3.jpg" alt="Bathroom" width={600} height={600} />], description: "Family-friendly residence with terrace.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 28 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "East Region",
+    cities: [
+      {
+        name: "Bertoua",
+        slug: "bertoua",
+        image: "https://discover-cameroon.com/wp-content/uploads/2015/04/Bertoua.jpg",
+        hotels: [
+          { name: "Hotel Martino", slug: "hotel-martino", image: "https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/7014/media/6687b39695040_1720169366_martino5.jpg", gallery: [<img src="https://yomboa.com/wp-content/uploads/2024/09/294508899_200687665623319_4137737156602286466_n.jpg" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL_x32xJVyWqNMVfkk8Rvs07qvvFb-AmA9Yg&s" alt="Poolside" width={600} height={600} />, <img src="https://pix10.agoda.net/hotelImages/63302919/0/7bb0fe5f6cda60c906d88fb4b17923a5.jpg?ce=0&s=702x392" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/1000000/470000/460600/460516/0e752344.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Central hotel with restaurant & pool.", amenities: ["Free WiFi", "Breakfast included", "Pool"], price: "XAF 75,000 / night", rating: "7.9", reviews: 48 },
+          { name: "Hotel Mansa", slug: "hotel-mansa", image: "https://www.cameroun-plus.com/data/eo/r1000382/Cameroun_hotel_Bertoua_MANSA_photo01.webp", gallery: [<img src="https://images.trvl-media.com/lodging/33000000/32860000/32856900/32856895/00ee6b6e.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src=" https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/4774/media/65413dd654728_1698774486_1697820045957.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000382/Cameroun_hotel_Bertoua_MANSA_photo05.webp" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32860000/32856900/32856895/5ef6098f.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Well-known in Bertoua for its spacious rooms.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 60,000 / night", rating: "7.7", reviews: 37 },
+          { name: "Hotel Massoh", slug: "hotel-massoh", image: " https://cdn-zen.readytotrip.com/t/1024x768/content/49/37/49371218932d78abdde7536d9ad79d41ae2e7e67.jpeg", gallery: [<img src=" https://images.trvl-media.com/lodging/33000000/32860000/32857400/32857351/91a846a0.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxnJou8EG_pIPA3VOnQPAM4-qBtsVnX1umPA&s" alt="Poolside" width={600} height={600} />, <img src=" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/6b/28/81/bienvenue-au-delice-sucre.jpg?w=900&h=500&s=1" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32860000/32857400/32857351/6ffc70e9.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Budget-friendly hotel near city center.", amenities: ["Free WiFi"], price: "XAF 45,000 / night", rating: "7.4", reviews: 24 },
+          { name: "Hotel Montagnia", slug: "hotel-montagnia", image: " https://cf.bstatic.com/xdata/images/hotel/max1024x768/287396324.jpg?k=9a3d1de788c886d5974a857f89a4e89bf09a3156f9b8c868c6980ceb17182ab0&o=&hp=1", gallery: [<img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoDdvNfwE0KJnSdv9M_P2-CHs7fNBoaUXkpfvDareQ1b55Vn1kpqOx6wiHj_oGusLzBSA&usqp=CAU" alt="Bedroom" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/287396317.jpg?k=5e027e63e206fee6772931b2127c2d2b03fad17107189e854f5f27f076a167a7&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src=" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/76/96/f8/enseigne.jpg?w=900&h=500&s=1" alt="Reception" width={600} height={600} />, <img src=" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/76/97/ba/hotel-le-montagnia.jpg?w=700&h=400&s=1" alt="Bathroom" width={600} height={600} />], description: "Quiet place with garden & bar.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.6", reviews: 28 },
+          { name: "Hotel Phoenix", slug: "hotel-phoenix", image: " https://camhebergement.com/img/fanga1%20(2).jpg", gallery: [<img src=" https://cdn.hotelsmotor.com/262/26171/Phoenix_Palace_Hotel_Bertoua-Bertoua-Cameroon08_large.webp" alt="Bedroom" width={600} height={600} />, <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn3Fkv54u2D_8ZONLkkSMwPnBQblo6nv5HDg&s " alt="Poolside" width={600} height={600} />, <img src=" https://www.phoenix-hotel.de/files/bilder/impressionen/02_Empfang_2.jpg" alt="Reception" width={600} height={600} />, <img src=" https://cdn.hotelsmotor.com/262/26171/Phoenix_Palace_Hotel_Bertoua-Bertoua-Cameroon10_large.webp" alt="Bathroom" width={600} height={600} />], description: "Family-friendly hotel.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 50,000 / night", rating: "7.5", reviews: 26 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "South Region",
+    cities: [
+      {
+        name: "Ebolowa",
+        slug: "ebolowa",
+        image: "https://i.ytimg.com/vi/mLZkPo17Kxk/maxresdefault.jpg",
+        hotels: [
+          { name: "Hotel Ndancy", slug: "hotel-ndancy", image: " https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/669fa91e741b7_1721739550_119912111_118008876711832_4767520145245625922_n.jpg", gallery: [<img src=" https://cdn-zen.readytotrip.com/t/1024x768/content/a3/2f/a32fb5ab7d4daa22f277b1df0418ce1bcd121fda.jpeg" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyUjayt0IsRUSs3-5xCN1wjZ_0taaILrYn-w&s" alt="Poolside" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/37000000/36970000/36962300/36962219/5016ffce.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Reception" width={600} height={600} />, <img src=" https://camhebergement.com/img/3308679404803NDAN11.jpeg" alt="Bathroom" width={600} height={600} />], description: "Well-located hotel with restaurant and a relaxing garden.", amenities: ["Free WiFi", "Breakfast included", "Restaurant"], price: "XAF 65,000 / night", rating: "7.8", reviews: 45 },
+          { name: "Hôtel Le Calao", slug: "hotel-le-calao", image: "https://yomboa.com/wp-content/uploads/2019/10/hotel-grand-calao-22677-af81b4c94f05a1e4774dfe0da99148561e8eab0b.jpg", gallery: [<img src=" https://yomboa.com/wp-content/uploads/2019/10/hotel-grand-calao-22677-339bbec24683587807b697312065dafe8ae89021.jpg" alt="Bedroom" width={600} height={600} />, <img src=" " alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh2B4OBs5pcZyfOC4YuY1OJaCt8P8oxthFdQ&s" alt="Reception" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW3XGCQcFU3k_66Hl_pNB_2D7F9gMY9SeSe9EHcHEb6cc1zU_3VxGwHzRg82KyEEgOvKM&usqp=CAU" alt="Bathroom" width={600} height={600} />], description: "Cozy and affordable stay with clean rooms.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 48,000 / night", rating: "7.5", reviews: 32 },
+          { name: "Residence Oceane", slug: "residence-oceane", image: " https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/67b84cc6812f1_1740131526_kribi%20Home%20Conforts%20(1).jpg", gallery: [<img src=" https://cdn.hotelsmotor.com/262/26189/Kapso_Hotel-Ebolowa-Cameroon02_large.webp" alt="Bedroom" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/94613019.jpg?k=4557d9be8b936b7a3d9a5e02404c84a2aa5c4fdc902a94ef6eeb2ce06d008845&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4P83duhLCp3UZLXiqRktzjEWVwmmPWWO2IA&s" alt="Reception" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/733608086.jpg?k=264269f43e3b7ac6305c02efc554a85cecce94c3dc4fc74db8ef3b1fef4dce9e&o=&hp=1" alt="Bathroom" width={600} height={600} />], description: "A simple and clean residence for short or long stays.", amenities: ["Free WiFi", "Kitchenette"], price: "XAF 55,000 / night", rating: "7.6", reviews: 30 },
+          { name: "Florence Hotel", slug: "florence-hotel", image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/a2/6c/c0/getlstd-property-photo.jpg?w=900&h=500&s=1", gallery: [<img src=" https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/7729/media/669fb78fb89f8_1721743247_242759_216624391694914_6465765_o.jpg" alt="Bedroom" width={600} height={600} />, <img src=" https://media-cdn.tripadvisor.com/media/photo-i/01/df/d9/ce/facade-arriere-de-florence.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYlhq2owhJQh9Ju7ntgRvJmJloa1UMG2yUmw&s" alt="Reception" width={600} height={600} />, <img src=" https://wakalooka.com/public/uploads/0000/21/2023/01/21/florence1.jpg" alt="Bathroom" width={600} height={600} />], description: "Boutique hotel with a calm atmosphere and a small bar.", amenities: ["Free WiFi", "Breakfast included", "Bar"], price: "XAF 50,000 / night", rating: "7.4", reviews: 25 },
+          { name: "Hotel Les Deux Palmiers", slug: "hotel-les-deux-palmiers", image: " https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/16/8e/20/photo0jpg.jpg?w=300&h=200&s=1", gallery: [<img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOY8iXw2EaODYKKptLyVwyRr2npg-XyKhnuw&s" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5iKerg5oJxKbyIkdqJ163GsC-D0WnJPraA&s" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuId93DuCRKI1yh5sjaymoXOYL7HUQGgVxRg&s" alt="Reception" width={600} height={600} />, <img src=" https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/c9/62/f6/une-invitation-a-profiter.jpg?w=1200&h=1200&s=1" alt="Bathroom" width={600} height={600} />], description: "Modern and clean rooms, popular for business travelers.", amenities: ["Free WiFi", "Breakfast included", "Meeting rooms"], price: "XAF 60,000 / night", rating: "7.7", reviews: 35 }
+        ]
+      }
+    ]
+  },
+  {
+    region: "Adamawa Region",
+    cities: [
+      {
+        name: "Ngaoundéré",
+        slug: "ngaoundere",
+        image: " https://i.ytimg.com/vi/nepqcvBOtmI/maxresdefault.jpg",
+        hotels: [
+          { name: "Hôtel Transcam", slug: "hotel-transcam", image: "https://media.timbu.com/big/7b5f6c45f8eee2ff5f0f3c6e71f9ec3d.png?w=400&h=280&c=1", gallery: [<img src=" https://images.trvl-media.com/lodging/33000000/32850000/32850000/32849926/b5e6037f.jpg?impolicy=fcrop&w=1200&h=800&quality=medium" alt="Bedroom" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000381/Cameroun_hotel_Ngaoundere_TRANSCAM_photo10.webp" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSam_hmM5c5b62HoKHY6Vop1e-GJlT4dDig&s" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/33000000/32850000/32850000/32849926/62d0e3ff.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "A classic hotel in Ngaoundéré, known for its restaurant.", amenities: ["Free WiFi", "Breakfast included", "Restaurant"], price: "XAF 60,000 / night", rating: "7.7", reviews: 40 },
+          { name: "Hôtel le Relais", slug: "hotel-le-relais", image: " https://images.trvl-media.com/lodging/4000000/3940000/3933900/3933889/07200174.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill", gallery: [<img src=" https://yomboa.com/wp-content/uploads/2024/09/69339782_107629797269799_2810814340112842752_n.jpg" alt="Bedroom" width={600} height={600} />, <img src=" https://img.directhotels.com/cm/yaounde/hotel-relais-saint-andre/1.jpg" alt="Poolside" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTapG4vyYl6CUf2MSJL4J7_f1uFJYer9yzhbw&s" alt="Reception" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/385857229.jpg?k=80567a0ded3ce7defc58838fe55bd88d54d1b0e13fa6ad2101860f54dbe1ce28&o=&hp=1" alt="Bathroom" width={600} height={600} />], description: "A simple and clean hotel in the heart of the city.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 55,000 / night", rating: "7.5", reviews: 30 },
+          { name: "Hôtel la Bénoué", slug: "hotel-la-benoue-ngaoundere", image: " https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/logos/663de72d9dfa3_1715332909_HOTEL%20LA%20BENOUE%20(6).jpg", gallery: [<img src=" https://www.cameroun-plus.com/data/eo/r1000380/Cameroun_hotel_Garoua_LA_BENOUE_photo03.webp" alt="Bedroom" width={600} height={600} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/601472135.jpg?k=9848350873707522c0a72f68e77ec5a63cb72ca1d8d53b1446a2e7b32a0e80f4&o=&hp=1" alt="Poolside" width={600} height={600} />, <img src=" https://www.cameroun-plus.com/data/eo/r1000380/Cameroun_hotel_Garoua_LA_BENOUE_photo02.webp" alt="Reception" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ggRYuYgTgFf6Uhwa_Uay5QR0bN9_ac6f6UIUcdmAH7xGbZFIcLkRFDPWe9Rb3UND95k&usqp=CAU" alt="Bathroom" width={600} height={600} />], description: "A budget-friendly option with a welcoming atmosphere.", amenities: ["Free WiFi"], price: "XAF 40,000 / night", rating: "7.2", reviews: 20 },
+          { name: "Hôtel Marhaba", slug: "hotel-marhaba", image: " https://res.cloudinary.com/doyf6tnc2/image/upload/t_hotel_medium,f_auto/hotel/0ba1b795_z_sjv6sj.webp", gallery: [<img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEWwrnFF5sWlTaKCGpWpdu5Wof4Vmq6AnRMAx8MFMjhkCRmblMivl0_SCdMBIYu7ig5kQ&usqp=CAU" alt="Bedroom" width={600} height={600} />, <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQphUP_3f6O2RQ6Cqrf8xhP3o3mc1_ogjhiHfPnHIC0hyDy_ZQBekLMuK4ecaaOrdUsq8&usqp=CAU" alt="Poolside" width={600} height={600} />, <img src=" https://yomboa.com/wp-content/uploads/2024/10/459322078_8543381909026892_443781239177811936_n.jpg" alt="Reception" width={600} height={600} />, <img src=" https://images.trvl-media.com/lodging/34000000/33290000/33287900/33287805/13f08b33.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill" alt="Bathroom" width={600} height={600} />], description: "Offers a nice view of the city with clean rooms.", amenities: ["Free WiFi", "Breakfast included", "Terrace"], price: "XAF 58,000 / night", rating: "7.6", reviews: 35 },
+          { name: "ZEN Hôtel", slug: "zen-hotel", image: "https://camhebergement.com/img/zen1-modified.jpeg ", gallery: [<img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ZPLawLDGmo_RnF4w1zL-wgNI8r3mczlZgw&s" alt="Bedroom" width={600} height={600} />, <img src=" https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/6889/media/6683cc4868405_1719913544_220609501_725940601473681_4788916126904873526_n.jpg" alt="Poolside" width={400} height={300} />, <img src=" https://ayilaa.s3.eu-west-1.amazonaws.com/attraction/6889/media/6683cc4eb0620_1719913550_242971430_785156672218740_9008726616854686067_n.jpg" alt="Reception" width={400} height={300} />, <img src=" https://cf.bstatic.com/xdata/images/hotel/max1024x768/734435854.jpg?k=d5a209cfbc7e6e4909133eaba4426d11a302f1fe8c3272314e9d3a3af6d1dfbc&o=&hp=1" alt="Bathroom" width={600} height={600} />], description: "A centrally located hotel with comfortable amenities.", amenities: ["Free WiFi", "Breakfast included"], price: "XAF 52,000 / night", rating: "7.4", reviews: 28 }
+        ]
+      }
+    ]
+  },
+]
