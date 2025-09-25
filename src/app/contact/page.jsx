@@ -5,14 +5,47 @@ import React from "react";
 import NavbarComponent from "@/components/Navbar/NavbarComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Loader2Icon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactPage = () => {
+
+  const [isSending, setIsSending] = useState(false);
+  const form = useRef();
+
+  const sendEmail = () => {
+   setIsSending(true);
+
+  emailjs.sendForm(
+    'service_polrjjn',       // from your dashboard
+    'template_2avy0u8',      // from your dashboard
+    form.current,
+    'Wdc-TWzCZa2pRc_5r'  // from your dashboard
+  )
+  .then(
+        () => {
+          setIsSending(false);
+          toast.success(" Email sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          setIsSending(false);
+          toast.error(" Failed to send: " + error.text);
+        }
+      );
+};
+
   return (
     <>
       <NavbarComponent />
 
       {/* Hero Section */}
       <section className="relative h-[400px] flex items-center justify-center text-center text-white overflow-hidden">
+        <ToastContainer position="top-center" />
         <img
           src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
           alt="Hotel background"
@@ -32,9 +65,9 @@ const ContactPage = () => {
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row shadow-lg rounded-lg overflow-hidden">
           
           {/* Form */}
-          <div className="lg:w-1/2 bg-white p-8 flex flex-col justify-center">
+          <div className="lg:w-1/2 bg-primary text-black p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-            <form className="space-y-4">
+            <form ref={form} className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
@@ -55,16 +88,25 @@ const ContactPage = () => {
                 rows="5"
                 className="w-full p-3 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
               ></textarea>
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition">
-                Send Message
-              </button>
+              {isSending ? (
+                <Button size="lg" className="w-full" disabled>
+                  <Loader2Icon className="animate-spin" />
+                  Please wait...
+                </Button>
+              ) : (
+                <Button size="sm" onClick={sendEmail}
+                className="w-full flex items-center justify-center p-3 text-white bg-blue-700 rounded-lg hover:bg-slate-700 transition-colors font-bold"
+                  >
+                  Send Message
+                </Button>
+              )}
             </form>
           </div>
 
           {/* Photo */}
           <div className="lg:w-1/2 h-full">
             <img
-              src="https://images.pexels.com/photos/3184451/pexels-photo-3184451.jpeg"
+              src="https://images.pexels.com/photos/7681288/pexels-photo-7681288.jpeg"
               alt="Hotel interior"
               className="w-full h-full object-cover"
             />

@@ -1,6 +1,7 @@
 export const cities = [
   // Littoral Region
   {
+    id: 1,
     region: "Litoral Region",
     name: "Douala",
     slug: "douala",
@@ -16,6 +17,7 @@ export const cities = [
 
   // Centre Region
   {
+    id: 2,
     region: "Center Region",
     name: "Yaoundé",
     slug: "yaounde",
@@ -30,7 +32,8 @@ export const cities = [
   },
 
   // South Region
-  {
+  { 
+    id: 3,
     region: "South Region",
     name: "Ebolowa",
     slug: "ebolowa",
@@ -46,6 +49,7 @@ export const cities = [
 
   // Southwest Region
   {
+    id: 4,
     region: "Southwest Region",
     name: "Buea",
     slug: "buea",
@@ -60,7 +64,8 @@ export const cities = [
   },
 
   // Northwest Region
-  {
+  { 
+    id: 5,
     region: "Northwest Region",
     name: "Bamenda",
     slug: "bamenda",
@@ -75,7 +80,8 @@ export const cities = [
   },
 
   // West Region
-  {
+  { 
+    id: 6,
     region: "West Region",
     name: "Bafoussam",
     slug: "bafoussam",
@@ -90,7 +96,8 @@ export const cities = [
   },
 
   // Far North Region
-  {
+  { 
+    id: 7,
     region: "Far North Region",
     name: "Maroua",
     slug: "maroua",
@@ -105,7 +112,8 @@ export const cities = [
   },
 
   // Adamawa Region
-  {
+  { 
+    id: 8,
     region: "Adamawa Region",
     name: "Ngaoundéré",
     slug: "ngaoundere",
@@ -120,7 +128,8 @@ export const cities = [
   },
 
   // East Region
-  {
+  { 
+    id: 9,
     region: "East Region",
     name: "Bertoua",
     slug: "bertoua",
@@ -136,6 +145,7 @@ export const cities = [
 
   // North Region
   {
+    id: 10,
     region: "North Region",
     name: "Garoua",
     slug: "garoua",

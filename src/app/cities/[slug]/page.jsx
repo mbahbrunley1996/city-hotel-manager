@@ -1,26 +1,47 @@
 'use client';
 
-import React, { useState } from 'react'; // 1. Import useState
-import { useParams } from 'next/navigation';
+import React, { useState, use } from 'react'; // 1. Import useState
+// import { useParams } from 'next/navigation';
 import { destinations } from '@/utils/destinations';
 import Link from 'next/link';
 import { ShoppingCart, Star } from 'lucide-react';
-import useCartStore from '@/store/cartStore';
+// import useCartStore from '@/store/cartStore';
 import FooterComponent from '@/components/Footer/FooterComponent';
 import { ArrowRight } from 'lucide-react';
+import { FaHeart } from 'react-icons/fa';
+// import React from 'react';
+import { useStoreCart } from '@/store/cart.store'; // ✅ named import now
 
-const CitiesPage = () => {
-  const params = useParams();
-  const slug = params.slug;
+// import useCartStore from '@/store/cartstore';
+
+const CitiesPage = ({ params }) => {
+  // const params = useParams();
+    const { slug } = use(params);
 
   const [searchQuery, setSearchQuery] = useState(''); // 2. State for search input
+  const [color, setColor] = useState(false);
 
   const city = destinations
     .flatMap(region => region.cities)
     .find(c => c.slug === slug);
 
-  const addToCart = useCartStore((state) => state.addToCart);
-  const cartItems = useCartStore((state) => state.cart);
+// const addToCart = useCartStore((state) => state.addToCart);
+// const cartItems = useCartStore((state) => state.cart);
+  // const { cartItems, toggleItem } = useCartStore();
+
+const cartItems = useStoreCart((state) => state.cartItems);
+const toggleItem = useStoreCart((state) => state.toggleItem);
+
+const [favorites, setFavorites] = useState([]);
+
+  const toggleFavorite = (hotelId) => {
+    setFavorites((prevFavs) =>
+      prevFavs.includes(hotelId)
+        ? prevFavs.filter((id) => id !== hotelId)
+        : [...prevFavs, hotelId]
+    );
+
+  };
 
   if (!city) {
     return (
@@ -97,12 +118,30 @@ const CitiesPage = () => {
                   className="w-full h-90 object-cover"
                 />
                 <Link
-                  href={`/cities/${city.slug}/${hotel.slug}`}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 absolute bottom-0 left-0"
+                  href={`/destinations/${city.slug}/${hotel.slug}`}
+                  key={destinations.id}
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 absolute top-5 left-5"
                 >
                  <div className='flex items-center'> Visits <span><ArrowRight /></span></div>
                 </Link>
               </div>
+
+
+               <div>
+                  <button
+                    onClick={() => toggleFavorite(hotel.id)}
+                    className={`absolute top-5 right-5 p-3 bg-gray-700 rounded-full shadow-lg hover:shadow-xl transition ${
+                    favorites.includes(hotel.id)
+                  ? 'text-red-500'
+                  : 'text-gray-500'
+                    }`}
+                     >
+
+                   <FaHeart size={20} />
+                   </button>
+               </div>
+
+
 
               {/* Hotel Info */}
               <div className="p-4">
@@ -123,12 +162,23 @@ const CitiesPage = () => {
                 <div className="mt-2">
                   <p className="text-sm text-gray-600"><strong>Amenities:</strong> {hotel.amenities.join(', ')}</p>
                 </div>
-                <button
+
+                     <button 
+                    onClick={(e) => {
+                      e.preventDefault(); // ✅ stop navigation when clicking cart
+                      toggleItem(hotel);
+                    }} 
+                    className="mt-4 px-2 bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
+                  >
+                    {cartItems.some(item => item.id === hotel.id) ? "Remove from Cart" : "Add to Cart"}
+                  </button>
+
+                {/* <button
                   onClick={() => addToCart(hotel)}
                   className="mt-4 px-2 bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
                 >
                   Add to Cart 🛒
-                </button>
+                </button> */}
               </div>
               <div className="group relative px-4 text-black text-right text-sm">
                 <button className="bg-blue-600 hover:bg-blue-700 font-bold text-md transition px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100">

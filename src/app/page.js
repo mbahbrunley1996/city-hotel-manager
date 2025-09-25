@@ -6,9 +6,16 @@ import HeroComponent from "@/components/Hero/HeroComponent";
 import CardComponent from "@/components/Cards/CardComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
 import { destinations } from "@/utils/destinations";
+import { FaHeart } from 'react-icons/fa';
+import { useStoreCart } from '@/store/cart.store'; // ✅ named import now
+
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("region");
+
+
+  const toggleItem = useStoreCart((state) => state.toggleItem);
+const cartItems = useStoreCart((state) => state.cartItems);
 
   // 1️⃣ Extract cities from destinations and create data for display
   const cities = useMemo(() => 
@@ -146,7 +153,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveTab("cities")}
-            className={`px-4 py-2 rounded ${
+            className={`px-4 py-2 rounded text-gray-500 ${
               activeTab === "cities" ? "bg-blue-600 text-white" : "bg-gray-200"
             }`}
           >
@@ -154,7 +161,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveTab("hotels")}
-            className={`px-4 py-2 rounded ${
+            className={`px-4 py-2 rounded text-gray-500 ${
               activeTab === "hotels" ? "bg-blue-600 text-white" : "bg-gray-200"
             }`}
           >
@@ -164,7 +171,7 @@ export default function Home() {
 
         {/* Data Display */}
         {activeTab !== "hotels" ? (
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 text-gray-500">
             {dataToDisplay.map((item, idx) => (
               <div
                 key={idx}
@@ -179,7 +186,7 @@ export default function Home() {
             {dataToDisplay.map((hotel, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded shadow hover:shadow-lg cursor-pointer text-black transition p-4 flex flex-col"
+                className="bg-white rounded shadow hover:shadow-lg cursor-pointer text-black transition p-4 flex flex-col relative"
               >
                 <img
                   src={hotel.image}
@@ -188,6 +195,18 @@ export default function Home() {
                   height={200}
                   className="rounded object-cover w-full text-black h-40"
                 />
+             <button
+  onClick={() => toggleItem(hotel)}
+  className={`absolute top-5 right-5 p-3 bg-gray-700 rounded-full shadow-lg hover:shadow-xl transition ${
+    cartItems.some(item => item.id === hotel.id)
+      ? 'text-red-500'
+      : 'text-gray-500'
+  }`}
+>
+
+  <FaHeart size={20} />
+</button>
+
                 <h3 className="text-lg font-semibold mt-2">{hotel.title}</h3>
                 <p className="text-sm text-gray-500">{hotel.location}</p>
                 <p className="text-sm font-bold">{hotel.price}</p>
