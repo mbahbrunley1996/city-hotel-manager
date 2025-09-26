@@ -146,6 +146,7 @@
 "use client";
 import Image from "next/image";
 import NavbarComponent from "@/components/Navbar/NavbarComponent";
+import FooterComponent from "@/components/Footer/FooterComponent";
 
 const Page = () => {
   // Benefits data with professional explanations
@@ -195,6 +196,7 @@ const Page = () => {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       {/* Navbar */}
       <NavbarComponent />
@@ -291,7 +293,9 @@ const Page = () => {
           Send Your CV
         </button>
       </section>
+      <FooterComponent  />
     </div>
+    </>
   );
 };
 

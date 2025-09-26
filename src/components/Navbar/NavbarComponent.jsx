@@ -81,13 +81,15 @@ const NavbarComponent = () => {
           </SignInButton>
         </SignedOut>
 
-        <SignedIn>
-          <UserButton afterSignOutUrl="/" />
-        </SignedIn>
-
         {/* Mode toggle */}
         <div className="border rounded-md border-gray-300 shadow">
           <ModeToggle />
+        </div>
+        <div>
+          <SignedIn>
+          {/* This will show your profile image/email dropdown */}
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
         </div>
       </div>
     </nav>

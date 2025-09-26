@@ -111,18 +111,20 @@ const [favorites, setFavorites] = useState([]);
               className="rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition relative hover:scale-95"
             >
               {/* Image with Hotel Details button */}
-              <div className="relative">
+              <div className="group relative">
                 <img
                   src={hotel.image}
                   alt={hotel.name}
                   className="w-full h-90 object-cover"
                 />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <Link
-                  href={`/destinations/${city.slug}/${hotel.slug}`}
+                  href={`/cities/${city.slug}/${hotel.slug}`}
                   key={destinations.id}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 absolute top-5 left-5"
-                >
-                 <div className='flex items-center'> Visits <span><ArrowRight /></span></div>
+                     className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                      >
+
+                 <div className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 flex items-center gap-2'> Visits <span><ArrowRight /></span></div>
                 </Link>
               </div>
 

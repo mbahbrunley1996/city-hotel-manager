@@ -61,11 +61,11 @@ const ContactPage = () => {
       </section>
 
       {/* Form + Photo Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-primary">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row shadow-lg rounded-lg overflow-hidden">
           
           {/* Form */}
-          <div className="lg:w-1/2 bg-primary text-black p-8 flex flex-col justify-center">
+          <div className="lg:w-1/2 bg-white text-black p-8 flex flex-col justify-center">
             <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
             <form ref={form} className="space-y-4">
               <input
@@ -123,7 +123,7 @@ const ContactPage = () => {
             <h2 className="text-2xl font-bold mb-2">Our Office</h2>
             <p>123 Hotel Street, Douala, Cameroon</p>
             <p>Email: info@cityhotelmanager.com</p>
-            <p>Phone: +237 123 456 789</p>
+            <p>Phone: +237 676 795 473</p>
           </div>
 
           {/* Social Media */}
