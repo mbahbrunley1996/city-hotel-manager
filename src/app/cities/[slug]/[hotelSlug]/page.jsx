@@ -269,7 +269,7 @@ const HotelDetailsPage = () => {
         <img
           src={imgUrl}
           alt={`${hotel.name} image ${idx + 1}`}
-          className="w-full h-200 object-cover"
+          className="w-full h-110 object-cover"
         />
       </div>
     ))}

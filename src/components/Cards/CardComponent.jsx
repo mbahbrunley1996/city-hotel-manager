@@ -93,13 +93,12 @@
 
 "use client";
 import Link from "next/link";
-import { useState } from "react";
 
 const CardComponent = ({ items, type }) => {
-  if (!items || items.length === 0) return <p className="text-center">No items found.</p>;
+  if (!items || items.length === 0)
+    return <p className="text-center py-10">No cities found.</p>;
 
   return (
-    <>
     <div className="max-w-7xl mx-auto px-6 md:px-0 py-10">
       {type === "city" && (
         <div className="text-center mb-10">
@@ -112,25 +111,21 @@ const CardComponent = ({ items, type }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {items.map((item, index) => (
-          <div key={index} className="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform duration-300">
-            {/* Decorative shape */}
+          <div
+            key={index}
+            className="relative bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition transform duration-300"
+          >
             <div className="absolute top-0 right-0 w-16 h-16 bg-blue-100 rounded-full opacity-30 pointer-events-none" />
-
-            {/* Region badge */}
             <div className="absolute top-0 left-0 bg-blue-600 text-white px-3 py-1 rounded-br-lg font-semibold text-sm z-10">
               {item.region}
             </div>
-
-            {/* Image */}
             <img
               src={item.image}
-              alt={item.name || item.title}
+              alt={item.name}
               className="rounded-t-xl object-cover w-full h-80"
             />
-
-            {/* Card info */}
             <div className="p-4 text-left">
-              <h3 className="font-bold text-gray-700 text-xl mb-2">{item.name || item.title}</h3>
+              <h3 className="font-bold text-gray-700 text-xl mb-2">{item.name}</h3>
               <p className="text-gray-500 mb-3">{item.location}</p>
               <Link
                 href={`/cities/${item.slug}`}
@@ -143,7 +138,6 @@ const CardComponent = ({ items, type }) => {
         ))}
       </div>
     </div>
-    </>
   );
 };
 
