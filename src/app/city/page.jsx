@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import CardComponent from "@/components/Card/CardComponent";
+import CardComponent from "@/components/Cards/CardComponent";
 import { cities } from "@/utils/data";
 
 const CitiesPage = () => {

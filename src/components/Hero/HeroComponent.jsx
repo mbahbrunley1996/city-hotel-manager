@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { cities } from "@/utils/data";
 import { motion } from "framer-motion";
-// import CardComponent from "@/components/Cards/CardComponent";
+import CardComponent from "@/components/Cards/CardComponent";
 
 const HeroComponent = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -120,7 +120,7 @@ const HeroComponent = () => {
       </section>
 
       {/* Display filtered cities in CardComponent */}
-      {/* <CardComponent items={filteredCities} type="city" /> */}
+      <CardComponent items={filteredCities} type="city" />
     </>
   );
 };
