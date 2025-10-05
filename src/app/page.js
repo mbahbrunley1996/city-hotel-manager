@@ -3,7 +3,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import NavbarComponent from "@/components/Navbar/NavbarComponent";
 import HeroComponent from "@/components/Hero/HeroComponent";
-// import CardComponent from "@/components/Cards/CardComponent";
+import CardComponent from "@/components/Cards/CardComponent";
 import FooterComponent from "@/components/Footer/FooterComponent";
 import { destinations } from "@/utils/destinations";
 import { FaHeart } from 'react-icons/fa';
@@ -62,7 +62,7 @@ const cartItems = useStoreCart((state) => state.cartItems);
     <>
     <NavbarComponent  />
     <HeroComponent />
-    {/* <CardComponent items={cities} type="city" /> */}
+    <CardComponent items={cities} type="city" />
      <div className="max-w-7xl mx-auto">
       {/* Title Section (Original Desktop Format) */}
       <div className="ml-0 text-3xl py-6 font-bold">

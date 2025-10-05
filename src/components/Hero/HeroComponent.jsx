@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Search } from "lucide-react";
 import { cities } from "@/utils/data";
 import { motion } from "framer-motion";
-import CardComponent from "@/components/Cards/CardComponent";
+// import CardComponent from "@/components/Cards/CardComponent";
 
 const HeroComponent = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,7 +17,7 @@ const HeroComponent = () => {
 
   return (
     <>
-      <section className="relative min-h-[70vh] flex items-center justify-center text-white">
+      <section className="relative sm:min-h-[60vh] flex items-center justify-center text-white">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
@@ -46,7 +46,7 @@ const HeroComponent = () => {
             whileTap={{ scale: 0.98 }}
             className="bg-blue-800 rounded-lg shadow-2xl p-4 md:p-6"
           >
-            <form className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+            <form className="grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-4 items-end">
               {/* Destination Input (city/region) */}
               <div className="flex flex-col md:col-span-2">
                 <label htmlFor="destination" className="text-sm font-semibold text-white mb-1">
@@ -120,7 +120,7 @@ const HeroComponent = () => {
       </section>
 
       {/* Display filtered cities in CardComponent */}
-      <CardComponent items={filteredCities} type="city" />
+      {/* <CardComponent items={filteredCities} type="city" /> */}
     </>
   );
 };
