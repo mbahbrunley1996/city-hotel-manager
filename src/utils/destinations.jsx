@@ -785,7 +785,7 @@ export const destinations = [
     {
       name: "Ebolowa",
       slug: "ebolowa",
-      image: "https://i.ytimg.com/vi/mLZkPo17Kxk/maxresdefault.jpg",
+      image: "https://www.shutterstock.com/shutterstock/photos/2363364225/display_1500/stock-photo-ebolowa-south-cameroon-july-beautiful-general-view-of-the-crowded-beach-of-kribi-in-2363364225.jpg",
       hotels: [
         {
           id: 41,

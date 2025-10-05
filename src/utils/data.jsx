@@ -37,7 +37,7 @@ export const cities = [
     region: "South Region",
     name: "Ebolowa",
     slug: "ebolowa",
-    image: "https://i.ytimg.com/vi/mLZkPo17Kxk/maxresdefault.jpg",
+    image: "https://www.shutterstock.com/shutterstock/photos/2363364225/display_1500/stock-photo-ebolowa-south-cameroon-july-beautiful-general-view-of-the-crowded-beach-of-kribi-in-2363364225.jpg",
     hotels: [
       { title: "Ebolowa Hotel 1", location: "Ebolowa", distance:"9.9km from town", price: "XAF 45,000 / night", image: "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg", reviewSummary: "7.8/10 · 50 reviews", details: "Comfortable hotel in Ebolowa.", Roomquality: "Standard Room", amenities: "Free WiFi, Breakfast included, 24-hour front desk", cancellation: "Free cancellation", priceDetails: "XAF 45,000 total for 1 night, 1 room, 2 guests" },
       { title: "Ebolowa Grand", location: "Ebolowa", distance:"9.8km from town", price: "XAF 50,000 / night", image: "https://images.pexels.com/photos/261047/pexels-photo-261047.jpeg", reviewSummary: "8.0/10 · 60 reviews", details: "Central hotel with modern amenities.", Roomquality: "Deluxe Room", amenities: "Free WiFi, Breakfast included, Pool", cancellation: "Free cancellation", priceDetails: "XAF 50,000 total for 1 night, 1 room, 2 guests" },
