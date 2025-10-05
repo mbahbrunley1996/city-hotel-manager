@@ -97,7 +97,7 @@ const cartItems = useStoreCart((state) => state.cartItems);
           <Image src="/icon images/image copy 3.png" alt="whyus" width={75} height={35} />
           <ul className="flex flex-col justify-center text-lg">
             <li className="font-bold">Reliable customer support, 24/7</li>
-            <li className="text-sm">We're always here to help you</li>
+            <li className="text-sm">We are always here to help you</li>
           </ul>
         </div>
         <div className="flex h-[100%] rounded-xl py-4 flex-col border border-gray-300 shadow-md hover:bg-gray-300 hover:text-[#000] hover:scale-101 duration-300 transition ease-in-out justify-center gap-6 px-4">
