@@ -104,7 +104,7 @@ const ContactPage = () => {
           </div>
 
           {/* Photo */}
-          <div className="lg:w-1/2 h-full">
+          <div className="lg:w-1/2">
             <img
               src="https://images.pexels.com/photos/7681288/pexels-photo-7681288.jpeg"
               alt="Hotel interior"
